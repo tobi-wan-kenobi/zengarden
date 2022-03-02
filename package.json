@@ -1,0 +1,10 @@
+{
+  "name": "zengarden",
+  "version": "0.0.1",
+  "repository": "git@github.com:tobi-wan-kenobi/zengarden.git",
+  "author": "tobi-wan-kenobi",
+  "license": "MIT",
+  "vim": {
+    "opt": true
+  }
+}
