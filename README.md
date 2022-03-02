@@ -1,6 +1,15 @@
-# ZenGarden
-
 ![License](https://img.shields.io/github/license/tobi-wan-kenobi/zengarden)
+
+# Screenshots
+
+## light
+
+![ZenGarden light](images/zengarden_light.png)
+
+## dark
+
+![ZenGarden dark](images/zengarden_dar.png)
+
 
 ZenGarden is a color scheme for vim/neovim that tries to be
 calm and relaxing, while still retaining some important properties
@@ -14,21 +23,11 @@ clever in this colorscheme is 100% [morhetz](https://github.com/morhetz)'s work,
 The colors are designed primarily with the light color scheme in mind (contrast), but the dark
 version also works (with lighter shades of accents).
 
-## Palette
+# Palette
 
 ![ZenGarden palette](images/zengarden_palette.png)
 
-## Examples
-
-### light
-
-![ZenGarden light](images/zengarden_light.png)
-
-### dark
-
-![ZenGarden dark](images/zengarden_dar.png)
-
-## Design
+# Design
 
 :warning: I am a software developer (backend, to boot!), not a designer, and it seriously
 shows in this color scheme :P
