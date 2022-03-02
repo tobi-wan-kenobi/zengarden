@@ -8,7 +8,7 @@
 
 ## dark
 
-![ZenGarden dark](images/zengarden_dar.png)
+![ZenGarden dark](images/zengarden_dark.png)
 
 
 ZenGarden is a color scheme for vim/neovim that tries to be
