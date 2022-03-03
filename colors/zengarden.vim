@@ -92,7 +92,7 @@ let s:gb.light4_256  = ['#c4b6a3', 246]
 let s:gb.bright_red     = ['#f85e89', 167]
 let s:gb.bright_green   = ['#53a776', 142]
 let s:gb.bright_yellow  = ['#d0a44c', 214]
-let s:gb.bright_blue    = ['#5175a6', 109]
+let s:gb.bright_blue    = ['#6493d3', 109]
 let s:gb.bright_purple  = ['#a94fa6', 175]
 let s:gb.bright_aqua    = ['#5396a6', 108]
 let s:gb.bright_orange  = ['#ff7639', 208]
@@ -100,7 +100,7 @@ let s:gb.bright_orange  = ['#ff7639', 208]
 let s:gb.neutral_red    = ['#d94070', 124]
 let s:gb.neutral_green  = ['#378c5d', 106]
 let s:gb.neutral_yellow = ['#b38a32', 172]
-let s:gb.neutral_blue   = ['#365c8c', 66]
+let s:gb.neutral_blue   = ['#477ab7', 66]
 let s:gb.neutral_purple = ['#8d348c', 132]
 let s:gb.neutral_aqua   = ['#377c8b', 72]
 let s:gb.neutral_orange = ['#e05b1f', 166]
@@ -108,7 +108,7 @@ let s:gb.neutral_orange = ['#e05b1f', 166]
 let s:gb.faded_red      = ['#ba1d58', 88]
 let s:gb.faded_green    = ['#177245', 100]
 let s:gb.faded_yellow   = ['#967117', 136]
-let s:gb.faded_blue     = ['#174572', 24]
+let s:gb.faded_blue     = ['#26619c', 24]
 let s:gb.faded_purple   = ['#721772', 96]
 let s:gb.faded_aqua     = ['#176372', 66]
 let s:gb.faded_orange   = ['#c04000', 130]
@@ -563,7 +563,7 @@ hi! link Operator Normal
 hi! link Keyword ZengardenRed
 
 " Variable name
-hi! link Identifier ZengardenAqua
+hi! link Identifier ZengardenBlue
 " Function name
 hi! link Function ZengardenGreenBold
 
