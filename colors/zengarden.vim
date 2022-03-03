@@ -563,7 +563,7 @@ hi! link Operator Normal
 hi! link Keyword ZengardenRed
 
 " Variable name
-hi! link Identifier ZengardenBlue
+hi! link Identifier ZengardenAqua
 " Function name
 hi! link Function ZengardenGreenBold
 
