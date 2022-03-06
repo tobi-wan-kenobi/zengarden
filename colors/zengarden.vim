@@ -66,52 +66,52 @@ endif
 
 let s:is_dark=(&background == 'dark')
 
-let s:gb = {}
+let s:zg = {}
 
-let s:gb.dark0_hard  = ['#2e3132', 236]
-let s:gb.dark0       = ['#353839', 235]
-let s:gb.dark0_soft  = ['#393c3d', 234]
-let s:gb.dark1       = ['#444748', 237]
-let s:gb.dark2       = ['#505354', 239]
-let s:gb.dark3       = ['#5c5f60', 241]
-let s:gb.dark4       = ['#686b6c', 243]
-let s:gb.dark4_256   = ['#686b6c', 243]
+let s:zg.dark0_hard  = ['#2e3132', 236]
+let s:zg.dark0       = ['#353839', 235]
+let s:zg.dark0_soft  = ['#393c3d', 234]
+let s:zg.dark1       = ['#444748', 237]
+let s:zg.dark2       = ['#505354', 239]
+let s:zg.dark3       = ['#5c5f60', 241]
+let s:zg.dark4       = ['#686b6c', 243]
+let s:zg.dark4_256   = ['#686b6c', 243]
 
-let s:gb.gray_245    = ['#747879', 245]
-let s:gb.gray_244    = ['#818485', 244]
+let s:zg.gray_245    = ['#747879', 245]
+let s:zg.gray_244    = ['#818485', 244]
 
-let s:gb.light0_hard = ['#f4ece2', 228]
-let s:gb.light0      = ['#faebd7', 229]
-let s:gb.light0_soft = ['#e7cda9', 230]
-let s:gb.light1      = ['#ebddc9', 223]
-let s:gb.light2      = ['#e0d1be', 250]
-let s:gb.light3      = ['#d2c4b0', 248]
-let s:gb.light4      = ['#c4b6a3', 246]
-let s:gb.light4_256  = ['#c4b6a3', 246]
+let s:zg.light0_hard = ['#f4ece2', 228]
+let s:zg.light0      = ['#faebd7', 229]
+let s:zg.light0_soft = ['#e7cda9', 230]
+let s:zg.light1      = ['#ebddc9', 223]
+let s:zg.light2      = ['#e0d1be', 250]
+let s:zg.light3      = ['#d2c4b0', 248]
+let s:zg.light4      = ['#c4b6a3', 246]
+let s:zg.light4_256  = ['#c4b6a3', 246]
 
-let s:gb.bright_red     = ['#f85e89', 167]
-let s:gb.bright_green   = ['#53a776', 142]
-let s:gb.bright_yellow  = ['#d0a44c', 214]
-let s:gb.bright_blue    = ['#6493d3', 109]
-let s:gb.bright_purple  = ['#a94fa6', 175]
-let s:gb.bright_aqua    = ['#5396a6', 108]
-let s:gb.bright_orange  = ['#ff7639', 208]
+let s:zg.bright_red     = ['#f85e89', 167]
+let s:zg.bright_green   = ['#53a776', 142]
+let s:zg.bright_yellow  = ['#d0a44c', 214]
+let s:zg.bright_blue    = ['#6493d3', 109]
+let s:zg.bright_purple  = ['#a94fa6', 175]
+let s:zg.bright_aqua    = ['#5396a6', 108]
+let s:zg.bright_orange  = ['#ff7639', 208]
 
-let s:gb.neutral_red    = ['#d94070', 124]
-let s:gb.neutral_green  = ['#378c5d', 106]
-let s:gb.neutral_yellow = ['#b38a32', 172]
-let s:gb.neutral_blue   = ['#477ab7', 66]
-let s:gb.neutral_purple = ['#8d348c', 132]
-let s:gb.neutral_aqua   = ['#377c8b', 72]
-let s:gb.neutral_orange = ['#e05b1f', 166]
+let s:zg.neutral_red    = ['#d94070', 124]
+let s:zg.neutral_green  = ['#378c5d', 106]
+let s:zg.neutral_yellow = ['#b38a32', 172]
+let s:zg.neutral_blue   = ['#477ab7', 66]
+let s:zg.neutral_purple = ['#8d348c', 132]
+let s:zg.neutral_aqua   = ['#377c8b', 72]
+let s:zg.neutral_orange = ['#e05b1f', 166]
 
-let s:gb.faded_red      = ['#ba1d58', 88]
-let s:gb.faded_green    = ['#177245', 100]
-let s:gb.faded_yellow   = ['#967117', 136]
-let s:gb.faded_blue     = ['#26619c', 24]
-let s:gb.faded_purple   = ['#721772', 96]
-let s:gb.faded_aqua     = ['#176372', 66]
-let s:gb.faded_orange   = ['#c04000', 130]
+let s:zg.faded_red      = ['#ba1d58', 88]
+let s:zg.faded_green    = ['#177245', 100]
+let s:zg.faded_yellow   = ['#967117', 136]
+let s:zg.faded_blue     = ['#26619c', 24]
+let s:zg.faded_purple   = ['#721772', 96]
+let s:zg.faded_aqua     = ['#176372', 66]
+let s:zg.faded_orange   = ['#c04000', 130]
 
 let s:bold = 'bold,'
 if g:zengarden_bold == 0
@@ -143,65 +143,65 @@ let s:vim_fg = ['fg', 'fg']
 let s:none = ['NONE', 'NONE']
 
 if s:is_dark
-  let s:bg0  = s:gb.dark0
+  let s:bg0  = s:zg.dark0
   if g:zengarden_contrast_dark == 'soft'
-    let s:bg0  = s:gb.dark0_soft
+    let s:bg0  = s:zg.dark0_soft
   elseif g:zengarden_contrast_dark == 'hard'
-    let s:bg0  = s:gb.dark0_hard
+    let s:bg0  = s:zg.dark0_hard
   endif
 
-  let s:bg1  = s:gb.dark1
-  let s:bg2  = s:gb.dark2
-  let s:bg3  = s:gb.dark3
-  let s:bg4  = s:gb.dark4
+  let s:bg1  = s:zg.dark1
+  let s:bg2  = s:zg.dark2
+  let s:bg3  = s:zg.dark3
+  let s:bg4  = s:zg.dark4
 
-  let s:gray = s:gb.gray_245
+  let s:gray = s:zg.gray_245
 
-  let s:fg0 = s:gb.light0
-  let s:fg1 = s:gb.light1
-  let s:fg2 = s:gb.light2
-  let s:fg3 = s:gb.light3
-  let s:fg4 = s:gb.light4
+  let s:fg0 = s:zg.light0
+  let s:fg1 = s:zg.light1
+  let s:fg2 = s:zg.light2
+  let s:fg3 = s:zg.light3
+  let s:fg4 = s:zg.light4
 
-  let s:fg4_256 = s:gb.light4_256
+  let s:fg4_256 = s:zg.light4_256
 
-  let s:red    = s:gb.bright_red
-  let s:green  = s:gb.bright_green
-  let s:yellow = s:gb.bright_yellow
-  let s:blue   = s:gb.bright_blue
-  let s:purple = s:gb.bright_purple
-  let s:aqua   = s:gb.bright_aqua
-  let s:orange = s:gb.bright_orange
+  let s:red    = s:zg.bright_red
+  let s:green  = s:zg.bright_green
+  let s:yellow = s:zg.bright_yellow
+  let s:blue   = s:zg.bright_blue
+  let s:purple = s:zg.bright_purple
+  let s:aqua   = s:zg.bright_aqua
+  let s:orange = s:zg.bright_orange
 else
-  let s:bg0  = s:gb.light0
+  let s:bg0  = s:zg.light0
   if g:zengarden_contrast_light == 'soft'
-    let s:bg0  = s:gb.light0_soft
+    let s:bg0  = s:zg.light0_soft
   elseif g:zengarden_contrast_light == 'hard'
-    let s:bg0  = s:gb.light0_hard
+    let s:bg0  = s:zg.light0_hard
   endif
 
-  let s:bg1  = s:gb.light1
-  let s:bg2  = s:gb.light2
-  let s:bg3  = s:gb.light3
-  let s:bg4  = s:gb.light4
+  let s:bg1  = s:zg.light1
+  let s:bg2  = s:zg.light2
+  let s:bg3  = s:zg.light3
+  let s:bg4  = s:zg.light4
 
-  let s:gray = s:gb.gray_244
+  let s:gray = s:zg.gray_244
 
-  let s:fg0 = s:gb.dark0
-  let s:fg1 = s:gb.dark1
-  let s:fg2 = s:gb.dark2
-  let s:fg3 = s:gb.dark3
-  let s:fg4 = s:gb.dark4
+  let s:fg0 = s:zg.dark0
+  let s:fg1 = s:zg.dark1
+  let s:fg2 = s:zg.dark2
+  let s:fg3 = s:zg.dark3
+  let s:fg4 = s:zg.dark4
 
-  let s:fg4_256 = s:gb.dark4_256
+  let s:fg4_256 = s:zg.dark4_256
 
-  let s:red    = s:gb.faded_red
-  let s:green  = s:gb.faded_green
-  let s:yellow = s:gb.faded_yellow
-  let s:blue   = s:gb.faded_blue
-  let s:purple = s:gb.faded_purple
-  let s:aqua   = s:gb.faded_aqua
-  let s:orange = s:gb.faded_orange
+  let s:red    = s:zg.faded_red
+  let s:green  = s:zg.faded_green
+  let s:yellow = s:zg.faded_yellow
+  let s:blue   = s:zg.faded_blue
+  let s:purple = s:zg.faded_purple
+  let s:aqua   = s:zg.faded_aqua
+  let s:orange = s:zg.faded_orange
 endif
 
 if g:zengarden_termcolors == 16
@@ -217,34 +217,34 @@ if g:zengarden_termcolors == 16
   let s:fg1[1]    = 15
 endif
 
-let s:gb.bg0 = s:bg0
-let s:gb.bg1 = s:bg1
-let s:gb.bg2 = s:bg2
-let s:gb.bg3 = s:bg3
-let s:gb.bg4 = s:bg4
+let s:zg.bg0 = s:bg0
+let s:zg.bg1 = s:bg1
+let s:zg.bg2 = s:bg2
+let s:zg.bg3 = s:bg3
+let s:zg.bg4 = s:bg4
 
-let s:gb.gray = s:gray
+let s:zg.gray = s:gray
 
-let s:gb.fg0 = s:fg0
-let s:gb.fg1 = s:fg1
-let s:gb.fg2 = s:fg2
-let s:gb.fg3 = s:fg3
-let s:gb.fg4 = s:fg4
+let s:zg.fg0 = s:fg0
+let s:zg.fg1 = s:fg1
+let s:zg.fg2 = s:fg2
+let s:zg.fg3 = s:fg3
+let s:zg.fg4 = s:fg4
 
-let s:gb.fg4_256 = s:fg4_256
+let s:zg.fg4_256 = s:fg4_256
 
-let s:gb.red    = s:red
-let s:gb.green  = s:green
-let s:gb.yellow = s:yellow
-let s:gb.blue   = s:blue
-let s:gb.purple = s:purple
-let s:gb.aqua   = s:aqua
-let s:gb.orange = s:orange
+let s:zg.red    = s:red
+let s:zg.green  = s:green
+let s:zg.yellow = s:yellow
+let s:zg.blue   = s:blue
+let s:zg.purple = s:purple
+let s:zg.aqua   = s:aqua
+let s:zg.orange = s:orange
 
 let g:terminal_ansi_colors = [
-	\ s:bg0[0], s:gb.neutral_red[0], s:gb.neutral_green[0],
-	\ s:gb.neutral_yellow[0], s:gb.neutral_blue[0],
-	\ s:gb.neutral_purple[0], s:gb.neutral_aqua[0],
+	\ s:bg0[0], s:zg.neutral_red[0], s:zg.neutral_green[0],
+	\ s:zg.neutral_yellow[0], s:zg.neutral_blue[0],
+	\ s:zg.neutral_purple[0], s:zg.neutral_aqua[0],
 	\ s:fg4[0], s:gray[0], s:red[0], s:green[0],
 	\ s:yellow[0], s:blue[0], s:purple[0], s:aqua[0], s:fg1[0] ]
 
@@ -252,22 +252,22 @@ if has('nvim')
   let g:terminal_color_0 = s:bg0[0]
   let g:terminal_color_8 = s:gray[0]
 
-  let g:terminal_color_1 = s:gb.neutral_red[0]
+  let g:terminal_color_1 = s:zg.neutral_red[0]
   let g:terminal_color_9 = s:red[0]
 
-  let g:terminal_color_2 = s:gb.neutral_green[0]
+  let g:terminal_color_2 = s:zg.neutral_green[0]
   let g:terminal_color_10 = s:green[0]
 
-  let g:terminal_color_3 = s:gb.neutral_yellow[0]
+  let g:terminal_color_3 = s:zg.neutral_yellow[0]
   let g:terminal_color_11 = s:yellow[0]
 
-  let g:terminal_color_4 = s:gb.neutral_blue[0]
+  let g:terminal_color_4 = s:zg.neutral_blue[0]
   let g:terminal_color_12 = s:blue[0]
 
-  let g:terminal_color_5 = s:gb.neutral_purple[0]
+  let g:terminal_color_5 = s:zg.neutral_purple[0]
   let g:terminal_color_13 = s:purple[0]
 
-  let g:terminal_color_6 = s:gb.neutral_aqua[0]
+  let g:terminal_color_6 = s:zg.neutral_aqua[0]
   let g:terminal_color_14 = s:aqua[0]
 
   let g:terminal_color_7 = s:fg4[0]
@@ -279,12 +279,12 @@ endif
 
 let s:hls_cursor = s:orange
 if exists('g:zengarden_hls_cursor')
-  let s:hls_cursor = get(s:gb, g:zengarden_hls_cursor)
+  let s:hls_cursor = get(s:zg, g:zengarden_hls_cursor)
 endif
 
 let s:number_column = s:none
 if exists('g:zengarden_number_column')
-  let s:number_column = get(s:gb, g:zengarden_number_column)
+  let s:number_column = get(s:zg, g:zengarden_number_column)
 endif
 
 let s:sign_column = s:bg1
@@ -296,18 +296,18 @@ else
   let g:gitgutter_override_sign_column_highlight = 0
 
   if exists('g:zengarden_sign_column')
-    let s:sign_column = get(s:gb, g:zengarden_sign_column)
+    let s:sign_column = get(s:zg, g:zengarden_sign_column)
   endif
 endif
 
 let s:color_column = s:bg1
 if exists('g:zengarden_color_column')
-  let s:color_column = get(s:gb, g:zengarden_color_column)
+  let s:color_column = get(s:zg, g:zengarden_color_column)
 endif
 
 let s:vert_split = s:bg0
 if exists('g:zengarden_vert_split')
-  let s:vert_split = get(s:gb, g:zengarden_vert_split)
+  let s:vert_split = get(s:zg, g:zengarden_vert_split)
 endif
 
 let s:invert_signs = ''
