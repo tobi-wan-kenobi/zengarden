@@ -56,3 +56,11 @@ So here's the plan I came up with:
 * For blue-ish colors (blue, cyan, also magenta), reduce lightness a bit more. I did this primarily
   because the colors appealed more to me subjectively.
 * For lighter/darker colors, the only thing I changed was to increase/decrease the "lightness" value by 10.
+
+# Mode
+To specify light or dark mode edit your .vimrc (or nvim's init.vim).
+
+```
+set background=light
+set background=dark
+```
