@@ -657,6 +657,16 @@ endif
 
 " }}}
 
+" Diagnostics: {{{
+
+hi! link DiagnosticError ZengardenRed
+hi! link DiagnosticWarn ZengardenOrange
+hi! link DiagnosticInfo ZengardenYellow
+hi! link DiagnosticHint ZengardenBlue
+hi! link DiagnosticOk ZengardenGreen
+
+" }}}
+
 " Plugin specific -------------------------------------------------------------
 " EasyMotion: {{{
 
@@ -877,10 +887,10 @@ hi! link CocErrorFloat ZengardenRed
 hi! link CocWarningFloat ZengardenOrange
 hi! link CocInfoFloat ZengardenYellow
 hi! link CocHintFloat ZengardenBlue
-hi! link CocDiagnosticsError ZengardenRed
-hi! link CocDiagnosticsWarning ZengardenOrange
-hi! link CocDiagnosticsInfo ZengardenYellow
-hi! link CocDiagnosticsHint ZengardenBlue
+hi! link CocDiagnosticsError DiagnosticError
+hi! link CocDiagnosticsWarning DiagnosticWarn
+hi! link CocDiagnosticsInfo DiagnosticInfo
+hi! link CocDiagnosticsHint DiagnosticHint
 
 hi! link CocSelectedText ZengardenRed
 hi! link CocCodeLens ZengardenGray
