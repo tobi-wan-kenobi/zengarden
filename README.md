@@ -1,27 +1,35 @@
 ![License](https://img.shields.io/github/license/tobi-wan-kenobi/zengarden)
 
-# Screenshots
-
-## light
-
-![ZenGarden light](images/zengarden_light.png)
-
-## dark
-
-![ZenGarden dark](images/zengarden_dark.png)
-
-
 ZenGarden is a color scheme for vim/neovim that tries to be
 calm and relaxing, while still retaining some important properties
 from color theory (contrast, uniform lightness).
 
-It is ... uh ... "heavily influenced" by [gruvbox](https://github.com/morhetz/gruvbox),
-by which I mean I took the gruvbox files & simply replaced `gruvbox`
-with `zengarden` and changed the colors. Anything that is fancy or
-clever in this colorscheme is 100% [morhetz](https://github.com/morhetz)'s work, not mine.
+This colorscheme is created with [lush](https://github.com/rktjmp/lush.nvim),
+and therefore depends on it.
+
+It is ... uh ... "heavily influenced" by [gruvbox](https://github.com/morhetz/gruvbox), which
+is an excellent colorscheme.
 
 The colors are designed primarily with the light color scheme in mind (contrast), but the dark
 version also works (with lighter shades of accents).
+
+# Screenshots
+
+![ZenGarden Dark](images/zengarden_dark.png)
+![ZenGarden Light](images/zengarden_light.png)
+
+# Installation
+
+## Packer
+
+```
+  use { "tobi-wan-kenobi/zengarden",
+    requires = "rktjmp/lush.nvim",
+    config = function()
+      vim.cmd [[ colorscheme zengarden ]]
+    end
+  }
+```
 
 # Palette
 
@@ -29,7 +37,7 @@ version also works (with lighter shades of accents).
 
 # Design
 
-:warning: I am a software developer (backend, to boot!), not a designer, and it seriously
+:warning: I am a software developer, not a designer, and it seriously
 shows in this color scheme :P
 
 Since I have 0 creative talent, I attempted to approach the color scheme design scientifically,
@@ -56,11 +64,3 @@ So here's the plan I came up with:
 * For blue-ish colors (blue, cyan, also magenta), reduce lightness a bit more. I did this primarily
   because the colors appealed more to me subjectively.
 * For lighter/darker colors, the only thing I changed was to increase/decrease the "lightness" value by 10.
-
-# Mode
-To specify light or dark mode edit your .vimrc (or nvim's init.vim).
-
-```
-set background=light
-set background=dark
-```
