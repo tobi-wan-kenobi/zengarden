@@ -74,7 +74,7 @@ local colors = {
 local themes = {
   dark = {
     fg = colors.base.white,
-    bg = colors.base.black_hard,
+    bg = colors.base.black,
     comments = colors.shade1.grey,
     blue = colors.shade2.blue,
     red = colors.shade1.red,
@@ -213,7 +213,7 @@ local theme = lush(function(injected_functions)
     Boolean        { fg = theme.blue }, --   A boolean constant: TRUE, false
     Float          { fg = theme.yellow }, --   A floating point constant: 2.3e10
 
-    Identifier     { fg = theme.cyan }, -- (*) Any variable name
+    Identifier     { fg = theme.yellow }, -- (*) Any variable name
     Function       { fg = theme.cyan }, --   Function name (also: methods for classes)
 
     Statement      { fg = theme.red }, -- (*) Any statement
@@ -339,7 +339,7 @@ local theme = lush(function(injected_functions)
     -- sym"@operator"          { }, -- Operator
     sym"@keyword"           { fg = theme.blue }, -- Keyword
     -- sym"@exception"         { }, -- Exception
-    -- sym"@variable"          { }, -- Identifier
+    sym"@variable"          { fg = theme.fg }, -- Identifier
     -- sym"@type"              { }, -- Type
     -- sym"@type.definition"   { }, -- Typedef
     -- sym"@storageclass"      { }, -- StorageClass

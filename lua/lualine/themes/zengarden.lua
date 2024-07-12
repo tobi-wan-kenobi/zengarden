@@ -60,9 +60,9 @@ return {
     c = { bg = theme.bg_dim2, fg = theme.fg }
   },
   inactive = {
-    a = { bg = theme.grey, fg = theme.bg_dim },
-    b = { bg = theme.bg_dim, fg = theme.fg },
-    c = { bg = theme.bg_dim2, fg = theme.fg }
+    a = { bg = theme.bg_dim2, fg = theme.grey },
+    b = { bg = theme.blue, fg = theme.fg },
+    c = { bg = theme.cyan, fg = theme.fg }
   }
 }
 

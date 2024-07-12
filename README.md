@@ -1,6 +1,6 @@
 ![License](https://img.shields.io/github/license/tobi-wan-kenobi/zengarden)
 
-ZenGarden is a color scheme for vim/neovim that tries to be
+ZenGarden is a color scheme for neovim that tries to be
 calm and relaxing, while still retaining some important properties
 from color theory (contrast, uniform lightness).
 
