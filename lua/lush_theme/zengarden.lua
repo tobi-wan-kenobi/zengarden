@@ -23,6 +23,7 @@
 
 local lush = require("lush")
 local hsl = lush.hsl
+local config = require("zengarden").config
 
 local function shade(color, value)
   if vim.o.background == "light" then
@@ -74,7 +75,7 @@ local colors = {
 local themes = {
   dark = {
     fg = colors.base.white,
-    bg = colors.base.black,
+    bg = colors.base.black_hard,
     comments = colors.shade1.grey,
     blue = colors.shade2.blue,
     red = colors.shade1.red,
@@ -113,10 +114,42 @@ if vim.o.background == "light" then
   theme = themes.light
 end
 
-local variant = {
-  fg = colors.shade2.cyan,
-  bg = colors.base.cyan,
+local variants = {
+  cyan = {
+    fg = colors.shade2.cyan,
+    bg = colors.base.cyan,
+  },
+  orange = {
+    fg = colors.shade2.orange,
+    bg = colors.base.orange,
+  },
+  yellow = {
+    fg = colors.shade2.yellow,
+    bg = colors.base.yellow,
+  },
+  magenta = {
+    fg = colors.shade2.magenta,
+    bg = colors.base.magenta,
+  },
+  blue = {
+    fg = colors.shade2.blue,
+    bg = colors.base.blue,
+  },
+  green = {
+    fg = colors.shade2.green,
+    bg = colors.base.green,
+  },
 }
+
+if config == nil then
+  config = { variant = "cyan" }
+end
+
+if variants[config.variant] == nil then
+  config.variant = "cyan"
+end
+
+local variant = variants[config.variant]
 
 ---@diagnostic disable: undefined-global
 local theme = lush(function(injected_functions)

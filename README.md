@@ -31,6 +31,27 @@ version also works (with lighter shades of accents).
   }
 ```
 
+## Configuration
+
+Optionally, you can call `setup()` on the module to set parameters:
+
+```
+  use { "tobi-wan-kenobi/zengarden",
+    requires = "rktjmp/lush.nvim",
+    config = function()
+        require("zengarden").setup({
+            variant = "yellow"
+        })
+      vim.cmd [[ colorscheme zengarden ]]
+    end
+  }
+```
+
+Currently, you can set the following parameters:
+
+* `variant`: sets highlight colors for float, menu, etc. to one of: `cyan` (the default),
+    `yellow`, `orange`, `magenta`, `green`
+
 # Palette
 
 ![ZenGarden palette](images/zengarden_palette.png)
