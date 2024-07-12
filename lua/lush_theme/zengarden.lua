@@ -192,7 +192,7 @@ local theme = lush(function(injected_functions)
     NonText        { fg = theme.comments }, -- "@" at the end of the window, characters from "showbreak" and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn"t fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal         { fg = theme.fg, bg = theme.bg }, -- Normal text
     NormalFloat    { fg = shade(theme.fg, 15), bg = shade(theme.bg, 15) }, -- Normal text in floating windows.
-    FloatBorder    { fg = shade(theme.fg, 15), bg = shade(theme.bg, 15) }, -- Border of floating windows.
+    FloatBorder    { fg = shade(theme.bg, 15), bg = shade(theme.bg, 15) }, -- Border of floating windows.
     FloatTitle     { fg = variant.fg, gui = "bold" }, -- Title of floating windows.
     -- NormalNC       { }, -- normal text in non-current windows
     -- Pmenu          { fg = colors.base.white, bg = colors.dark.grey }, -- Popup menu: Normal item.
