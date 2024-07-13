@@ -51,6 +51,7 @@ Currently, you can set the following parameters:
 
 * `variant`: sets highlight colors for float, menu, etc. to one of: `cyan` (the default),
     `yellow`, `orange`, `magenta`, `green`
+* `italics`: whether italics should be used (default) or not, boolean value
 
 # Palette
 

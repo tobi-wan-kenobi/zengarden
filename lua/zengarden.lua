@@ -4,16 +4,11 @@ local module = {}
 
 local defaults = {
   italics = true,
-  guicursor = true,
 }
 module.config = defaults
 
 function module.setup(options)
   module.config = vim.tbl_deep_extend("force", {}, defaults, options or {})
-
-  if module.config.guicursor then
-    vim.opt.guicursor = "n-v-c-sm:block-Cursor,i-ci-ve:ver25-Cursor,r-cr-o:hor20-Cursor"
-  end
 end
 
 function module.load()

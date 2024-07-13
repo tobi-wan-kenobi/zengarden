@@ -1,5 +1,3 @@
-vim.g.colors_name = "zengarden"
+local zengarden = require("zengarden")
 
-package.loaded["lush_theme.zengarden"] = nil
-
-require("lush")(require("lush_theme.zengarden"))
+zengarden.load()
