@@ -1,0 +1,125 @@
+.theme-dark {
+	--background-primary: var(--black-hard);
+	--background-secondary: var(--black);
+
+	--header-color: var(--orange2);
+
+	--link-color: var(--cyan2);
+	--link-external-color: var(--cyan2);
+	--link-decoration: none;
+	--link-external-decoration: none;
+	--link-unresolved-color: var(--cyan1);
+	--link-color-hover: var(--cyan2);
+	--link-external-color-hover: var(--yellow2);
+	--text-selection: var(--grey);
+
+	--tag-color: var(--blue2);
+	--tag-background: var(--background-primary);
+	--tag-border-color: var(--blue2);
+	--tag-border-width: 1px;
+}
+
+.theme-light {
+	--background-primary: var(--white);
+	--background-secondary: var(--white-hard);
+
+	--header-color: var(--orange);
+
+	--link-color: var(--cyan);
+	--link-external-color: var(--cyan);
+	--link-decoration: none;
+	--link-external-decoration: none;
+	--link-unresolved-color: var(--cyan);
+	--link-color-hover: var(--cyan1);
+	--link-external-color-hover: var(--yellow);
+	--text-selection: var(--grey);
+
+	--tag-color: var(--blue);
+	--tag-background: var(--background-primary);
+	--tag-border-color: var(--blue);
+	--tag-border-width: 1px;
+}
+
+.is-unresolved {
+	font-style: italic;
+}
+
+:root {
+	/* color definitions */
+	--dark_grey: #505354;
+	--grey: #686b6c;
+	--white: #faebd7;
+	--white-hard: #ebddc9;
+	--black: #353839;
+	--black-soft: #393c3d;
+	--black-hard: #2e3132;
+	--green: #177245;
+	--red: #ba1d58;
+	--yellow: #967117;
+	--blue: #26619c;
+	--magenta: #721772;
+	--cyan: #176372;
+	--orange: #c04000;
+
+	--green1: #378c5d;
+	--red1: #d94070;
+	--yellow1: #b38a32;
+	--blue1: #477ab7;
+	--magenta1: #8d348c;
+	--cyan1: #377c8b;
+	--orange1: #e05b1f;
+
+	--green2: #53a776;
+	--red2: #f85e89;
+	--yellow2: #d0a44c;
+	--blue2: #6493d3;
+	--magenta2: #a94fa6;
+	--cyan2: #5396a6;
+	--orange2: #ff7639;
+}
+
+body {
+    --font-monospace: "Hack Nerd Font", "Source Code Pro", monospace;
+    -webkit-font-smoothing: auto;
+
+    --h1-color: var(--header-color);
+    --h2-color: var(--header-color);
+    --h3-color: var(--header-color);
+    --h4-color: var(--header-color);
+    --h5-color: var(--header-color);
+    --h6-color: var(--header-color);
+
+	--link-unresolved-opacity: 0.8;
+
+   --input-focus-border-color: Highlight;
+   --input-focus-outline: 1px solid Canvas;
+   --input-unfocused-border-color: transparent;
+   --input-disabled-border-color: transparent;
+   --input-hover-border-color: #686b6c;
+
+   --file-line-width: 90%;
+}
+
+
+.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
+	display: none;
+}
+
+svg * {
+	stroke-linecap: square;
+	stroke-linejoin: miter;
+	rx: 0;
+	ry: 0;
+}
+
+.menu {
+	padding: var(--size-2-1);
+}
+
+.menu-item {
+	padding: var(--size-4-1) var(--size-4-2);
+}
+
+.menu-separator {
+	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+}
