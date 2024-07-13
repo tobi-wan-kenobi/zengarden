@@ -237,7 +237,7 @@ local theme = lush(function(injected_functions)
     --
     -- Uncomment and edit if you want more specific syntax highlighting.
 
-    Comment        { fg = theme.comments, gui = "italic" }, -- Any comment
+    Comment        { fg = theme.comments }, -- Any comment
 
     Constant       { fg = theme.green }, -- (*) Any constant
     String         { fg = theme.green }, --   A string constant: "this is a string"
@@ -254,8 +254,8 @@ local theme = lush(function(injected_functions)
     -- Repeat         { }, --   for, do, while, etc.
     -- Label          { }, --   case, default, etc.
     -- Operator       { }, --   "sizeof", "+", "*", etc.
-    Keyword        { fg = theme.yellow, gui = "italic" }, --   any other keyword
-    Exception      { fg = theme.red, gui = "italic" }, --   try, catch, throw
+    Keyword        { fg = theme.yellow }, --   any other keyword
+    Exception      { fg = theme.red }, --   try, catch, throw
 
     PreProc        { fg = theme.blue }, -- (*) Generic Preprocessor
     -- Include        { }, --   Preprocessor #include
@@ -264,7 +264,7 @@ local theme = lush(function(injected_functions)
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
     Type           { fg = theme.yellow }, -- (*) int, long, char, etc.
-    StorageClass   { fg = theme.yellow, gui = "italic" }, --   static, register, volatile, etc.
+    StorageClass   { fg = theme.yellow }, --   static, register, volatile, etc.
     -- Structure      { }, --   struct, union, enum, etc.
     -- Typedef        { }, --   A typedef
 
@@ -294,11 +294,11 @@ local theme = lush(function(injected_functions)
 
     -- See :h diagnostic-highlights, some groups may not be listed, submit a PR fix to lush-template!
     --
-    DiagnosticError            { fg = theme.error, gui = "italic" } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-    DiagnosticWarn             { fg = theme.warn, gui = "italic" } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-    DiagnosticInfo             { fg = theme.info, gui = "italic" } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-    DiagnosticHint             { fg = theme.hint, gui = "italic" } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-    DiagnosticOk               { fg = theme.ok, gui = "italic" } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+    DiagnosticError            { fg = theme.error }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+    DiagnosticWarn             { fg = theme.warn }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+    DiagnosticInfo             { fg = theme.info }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+    DiagnosticHint             { fg = theme.hint }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+    DiagnosticOk               { fg = theme.ok }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
     -- DiagnosticVirtualTextError { } , -- Used for "Error" diagnostic virtual text.
     -- DiagnosticVirtualTextWarn  { } , -- Used for "Warn" diagnostic virtual text.
     -- DiagnosticVirtualTextInfo  { } , -- Used for "Info" diagnostic virtual text.
@@ -377,7 +377,7 @@ local theme = lush(function(injected_functions)
     -- sym"@type.definition"   { }, -- Typedef
     -- sym"@storageclass"      { }, -- StorageClass
     -- sym"@structure"         { }, -- Structure
-    sym"@namespace"         { fg = theme.blue, gui = "italic" }, -- Identifier
+    sym"@namespace"         { fg = theme.blue }, -- Identifier
     sym"@include"           { fg = theme.blue }, -- Include
     sym"@preproc"           { fg = theme.blue }, -- PreProc
     -- sym"@debug"             { }, -- Debug
