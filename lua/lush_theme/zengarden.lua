@@ -46,20 +46,21 @@ local colors = {
   sakura = hsl("#ffa7a6"),
   cherry = hsl("#a52138"),
   brick = hsl("#b62625"),
-  coral = hsl("#ff7c7c"),
-  pond = hsl("#79b4da"),
   sapphire = hsl("#1a5bc4"),
-  jade = hsl("#38c283"),
   bamboo = hsl("#076745"),
   emerald = hsl("#196f18"),
   sand = hsl("#baaf43"),
   bronze = hsl("#94601e"),
   daylily = hsl("#ff8936"),
-  flamingo = hsl("#f56df6"),
-  verdigris = hsl("#4bb9b4"),
   mahagony = hsl("#c04000"),
   orchid = hsl("#9932cc"),
   teal = hsl("#007575"),
+
+  coral = hsl("#e36364"),
+  pond = hsl("#5e98bd"),
+  jade = hsl("#00a661"),
+  flamingo = hsl("#d952db"),
+  verdigris = hsl("#2fa39e"),
 }
 
 local themes = {
