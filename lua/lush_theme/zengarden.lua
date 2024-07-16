@@ -34,78 +34,68 @@ local function shade(color, value)
 end
 
 local colors = {
-  dark = {
-    grey = hsl("#505354"),
-  },
-  base = {
-    grey = hsl("#686b6c"),
-    white = hsl("#faebd7"),
-    black = hsl("#353839"),
-    black_soft = hsl("#393c3d"),
-    black_hard = hsl("#2e3132"),
-    green = hsl("#177245"),
-    red = hsl("#ba1d58"),
-    yellow = hsl("#967117"),
-    blue = hsl("#26619c"),
-    magenta = hsl("#721772"),
-    cyan = hsl("#176372"),
-    orange = hsl("#c04000"),
-  },
-  shade1 = {
-    grey = hsl("#686b6c").lighten(15),
-    green = hsl("#378c5d"),
-    red = hsl("#d94070"),
-    yellow = hsl("#b38a32"),
-    blue = hsl("#477ab7"),
-    magenta = hsl("#8d348c"),
-    cyan = hsl("#377c8b"),
-    orange = hsl("#e05b1f"),
-  },
-  shade2 = {
-    green = hsl("#53a776"),
-    red = hsl("#f85e89"),
-    yellow = hsl("#d0a44c"),
-    blue = hsl("#6493d3"),
-    magenta = hsl("#a94fa6"),
-    cyan = hsl("#5396a6"),
-    orange = hsl("#ff7639"),
-  },
+  onyx = hsl("#030106"),
+  obsidian = hsl("#000602"),
+  rock = hsl("#2e2e2e"),
+  basalt = hsl("#242020"),
+  black_chestnut = hsl("#252321"),
+  kurobeni = hsl("#23191e"),
+  gravel = hsl("#686b6c"),
+  ivory = hsl("#faebd7"),
+  ivory_light = hsl("#fffaf2"),
+  sakura = hsl("#ffa7a6"),
+  cherry = hsl("#a52138"),
+  brick = hsl("#b62625"),
+  coral = hsl("#ff7c7c"),
+  pond = hsl("#79b4da"),
+  sapphire = hsl("#1a5bc4"),
+  jade = hsl("#38c283"),
+  bamboo = hsl("#076745"),
+  emerald = hsl("#196f18"),
+  sand = hsl("#baaf43"),
+  bronze = hsl("#94601e"),
+  daylily = hsl("#ff8936"),
+  flamingo = hsl("#f56df6"),
+  verdigris = hsl("#4bb9b4"),
+  mahagony = hsl("#c04000"),
+  orchid = hsl("#9932cc"),
+  teal = hsl("#007575"),
 }
 
 local themes = {
   dark = {
-    fg = colors.base.white,
-    bg = colors.base.black_hard,
-    comments = colors.shade1.grey,
-    blue = colors.shade2.blue,
-    red = colors.shade1.red,
-    green = colors.shade2.green,
-    orange = colors.shade2.orange,
-    magenta = colors.shade1.magenta,
-    yellow = colors.shade1.yellow,
-    cyan = colors.shade2.cyan,
-    error = colors.base.red,
-    warn = colors.shade2.orange,
-    info = colors.shade2.blue,
-    hint = colors.shade2.cyan,
-    ok = colors.shade2.green,
+    fg = colors.ivory,
+    bg = colors.black_chestnut,
+    comments = colors.gravel,
+    blue = colors.pond,
+    red = colors.coral,
+    green = colors.jade,
+    orange = colors.daylily,
+    magenta = colors.flamingo,
+    yellow = colors.sand,
+    cyan = colors.verdigris,
+    error = colors.coral,
+    warn = colors.daylily,
+    info = colors.pond,
+    hint = colors.verdigris,
+    ok = colors.jade,
   },
   light = {
-    fg = colors.base.black_hard,
-    bg = colors.base.white,
-    comments = colors.base.grey,
-    blue = colors.base.blue,
-    red = colors.shade1.red,
-    green = colors.base.green,
-    orange = colors.base.orange,
-    magenta = colors.base.magenta,
-    cyan = colors.shade1.cyan,
-    yellow = colors.base.yellow,
-    error = colors.base.red,
-    warn = colors.base.orange,
-    info = colors.base.blue,
-    hint = colors.base.cyan,
-    ok = colors.base.green,
+    fg = colors.rock,
+    bg = colors.ivory,
+    comments = colors.gravel,
+    blue = colors.sapphire,
+    red = colors.brick,
+    green = colors.emerald,
+    orange = colors.mahagony,
+    magenta = colors.orchid,
+    cyan = colors.teal,
+    yellow = colors.bronze,
+    error = colors.brick,
+    warn = colors.mahagony,
+    info = colors.sapphire,
+    hint = colors.teal,
+    ok = colors.emerald,
   },
 }
 
@@ -116,28 +106,28 @@ end
 
 local variants = {
   cyan = {
-    fg = colors.shade2.cyan,
-    bg = colors.base.cyan,
+    fg = colors.verdigris,
+    bg = colors.teal,
   },
   orange = {
-    fg = colors.shade2.orange,
-    bg = colors.base.orange,
+    fg = colors.daylily,
+    bg = colors.mahagony,
   },
   yellow = {
-    fg = colors.shade2.yellow,
-    bg = colors.base.yellow,
+    fg = colors.sand,
+    bg = colors.bronze,
   },
   magenta = {
-    fg = colors.shade2.magenta,
-    bg = colors.base.magenta,
+    fg = colors.flamingo,
+    bg = colors.orchid,
   },
   blue = {
-    fg = colors.shade2.blue,
-    bg = colors.base.blue,
+    fg = colors.pond,
+    bg = colors.saphhire,
   },
   green = {
-    fg = colors.shade2.green,
-    bg = colors.base.green,
+    fg = colors.jade,
+    bg = colors.emerald,
   },
 }
 
@@ -179,8 +169,8 @@ local theme = lush(function(injected_functions)
     IncSearch      { bg = theme.yellow, fg = theme.bg }, -- "incsearch" highlighting; also used for the text replaced with ":s///c"
     -- Substitute     { }, -- |:substitute| replacement text highlighting
     LineNr         { fg = theme.comments }, -- Line number for ":number" and ":#" commands, and when "number" or "relativenumber" option is set.
-    LineNrAbove    { fg = colors.base.red }, -- Line number for when the "relativenumber" option is set, above the cursor line
-    LineNrBelow    { fg = colors.base.green }, -- Line number for when the "relativenumber" option is set, below the cursor line
+    LineNrAbove    { fg = theme.red }, -- Line number for when the "relativenumber" option is set, above the cursor line
+    LineNrBelow    { fg = theme.green }, -- Line number for when the "relativenumber" option is set, below the cursor line
     CursorLineNr   { gui = "bold" }, -- Like LineNr when "cursorline" or "relativenumber" is set for the cursor line.
     -- CursorLineFold { }, -- Like FoldColumn when "cursorline" is set for the cursor line
     -- CursorLineSign { }, -- Like SignColumn when "cursorline" is set for the cursor line
@@ -195,10 +185,8 @@ local theme = lush(function(injected_functions)
     FloatBorder    { fg = shade(theme.bg, 15), bg = shade(theme.bg, 15) }, -- Border of floating windows.
     FloatTitle     { fg = variant.fg, gui = "bold" }, -- Title of floating windows.
     -- NormalNC       { }, -- normal text in non-current windows
-    -- Pmenu          { fg = colors.base.white, bg = colors.dark.grey }, -- Popup menu: Normal item.
-    -- PmenuSel       { fg = colors.base.white, bg = variant.bg }, -- Popup menu: Selected item.
     Pmenu          { fg = shade(theme.fg, 15), bg = shade(theme.bg, 15) }, -- Popup menu: Normal item.
-    PmenuSel       { fg = colors.base.white, bg = variant.bg }, -- Popup menu: Selected item.
+    PmenuSel       { fg = colors.white, bg = variant.bg }, -- Popup menu: Selected item.
     -- PmenuKind      { }, -- Popup menu: Normal item "kind"
     -- PmenuKindSel   { }, -- Popup menu: Selected item "kind"
     -- PmenuExtra     { }, -- Popup menu: Normal item "extra text"
@@ -224,7 +212,7 @@ local theme = lush(function(injected_functions)
     -- VisualNOS      { }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg     { fg = theme.error }, -- Warning messages
     -- Whitespace     { }, -- "nbsp", "space", "tab" and "trail" in "listchars"
-    Winseparator   { fg = colors.base.grey }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
+    Winseparator   { fg = colors.grey }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
     -- WildMenu       { }, -- Current match in "wildmenu" completion
     WinBar         { fg = variant.fg, bg = theme.bg }, -- Window bar of current window
     WinBarNC       { fg = theme.comments, bg = theme.bg }, -- Window bar of not-current windows
@@ -269,7 +257,7 @@ local theme = lush(function(injected_functions)
     -- Typedef        { }, --   A typedef
 
     Special        { fg = theme.orange }, -- (*) Any special symbol
-    SpecialChar    { fg = colors.base.orange }, --   Special character in a constant
+    SpecialChar    { fg = shade(theme.orange, 15) }, --   Special character in a constant
     -- Tag            { }, --   You can use CTRL-] on this
     -- Delimiter      { }, --   Character that needs attention
     -- SpecialComment { }, --   Special things inside a comment (e.g. "\n")
