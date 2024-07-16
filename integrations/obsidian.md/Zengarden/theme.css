@@ -1,8 +1,21 @@
 .theme-dark {
+	--text-normal: var(--white);
+	--text-muted: var(--grey);
+	--text-faint: var(--white-faint);
 	--background-primary: var(--black-hard);
+	--background-primary-alt: var(--black);
 	--background-secondary: var(--black);
+	--background-secondary-alt: var(--black-soft);
 
-	--header-color: var(--orange2);
+	--background-modifier-error: var(--red);
+	--background-modifier-success: var(--green);
+	--background-modifier-message: var(--blue);
+
+	--text-success: var(--green2);
+	--text-warning: var(--orange2);
+	--text-error: var(--red2);
+
+	--header-color: var(--yellow2);
 
 	--link-color: var(--cyan2);
 	--link-external-color: var(--cyan2);
@@ -17,13 +30,35 @@
 	--tag-background: var(--background-primary);
 	--tag-border-color: var(--blue2);
 	--tag-border-width: 1px;
+
+	--list-marker-color: var(--cyan2);
+	--list-marker-color-hover: var(--blue2);
+	--list-bullet-size: 6px;
+
+	--table-border-width: 1px;
+	--table-border-color: var(--cyan2);
+	--table-header-background: var(--cyan2);
+	--table-header-color: var(--white);
 }
 
 .theme-light {
+	--text-normal: var(--black-hard);
+	--text-muted: var(--black);
+	--text-faint: var(--black-soft);
 	--background-primary: var(--white);
+	--background-primary-alt: var(--white-soft);
 	--background-secondary: var(--white-hard);
+	--background-secondary-alt: var(--white);
 
-	--header-color: var(--orange);
+	--background-modifier-error: var(--red2);
+	--background-modifier-success: var(--green2);
+	--background-modifier-message: var(--blue2);
+
+	--text-success: var(--green);
+	--text-warning: var(--orange);
+	--text-error: var(--red);
+
+	--header-color: var(--yellow);
 
 	--link-color: var(--cyan);
 	--link-external-color: var(--cyan);
@@ -38,6 +73,15 @@
 	--tag-background: var(--background-primary);
 	--tag-border-color: var(--blue);
 	--tag-border-width: 1px;
+
+	--list-marker-color: var(--cyan);
+	--list-marker-color-hover: var(--blue);
+	--list-bullet-size: 6px;
+
+	--table-border-width: 1px;
+	--table-border-color: var(--cyan);
+	--table-header-background: var(--cyan);
+	--table-header-color: var(--white);
 }
 
 .is-unresolved {
@@ -49,7 +93,10 @@
 	--dark_grey: #505354;
 	--grey: #686b6c;
 	--white: #faebd7;
+	--white-soft: #f4ece2;
 	--white-hard: #ebddc9;
+	--white-muted: #e0d1be;
+	--white-faint: #c4b6a3;
 	--black: #353839;
 	--black-soft: #393c3d;
 	--black-hard: #2e3132;
@@ -95,7 +142,7 @@ body {
    --input-focus-outline: 1px solid Canvas;
    --input-unfocused-border-color: transparent;
    --input-disabled-border-color: transparent;
-   --input-hover-border-color: #686b6c;
+   --input-hover-border-color: var(--red);
 
    --file-line-width: 90%;
 }
