@@ -11,33 +11,33 @@
 	--background-modifier-success: var(--green);
 	--background-modifier-message: var(--blue);
 
-	--text-success: var(--green2);
-	--text-warning: var(--orange2);
-	--text-error: var(--red2);
+	--text-success: var(--green1);
+	--text-warning: var(--orange1);
+	--text-error: var(--red1);
 
-	--header-color: var(--yellow2);
+	--header-color: var(--yellow1);
 
-	--link-color: var(--cyan2);
-	--link-external-color: var(--cyan2);
+	--link-color: var(--cyan1);
+	--link-external-color: var(--cyan1);
 	--link-decoration: none;
 	--link-external-decoration: none;
 	--link-unresolved-color: var(--cyan1);
-	--link-color-hover: var(--cyan2);
-	--link-external-color-hover: var(--yellow2);
+	--link-color-hover: var(--cyan1);
+	--link-external-color-hover: var(--yellow1);
 	--text-selection: var(--grey);
 
-	--tag-color: var(--blue2);
+	--tag-color: var(--blue1);
 	--tag-background: var(--background-primary);
-	--tag-border-color: var(--blue2);
+	--tag-border-color: var(--blue1);
 	--tag-border-width: 1px;
 
-	--list-marker-color: var(--cyan2);
-	--list-marker-color-hover: var(--blue2);
+	--list-marker-color: var(--cyan1);
+	--list-marker-color-hover: var(--blue1);
 	--list-bullet-size: 6px;
 
 	--table-border-width: 1px;
-	--table-border-color: var(--cyan2);
-	--table-header-background: var(--cyan2);
+	--table-border-color: var(--cyan1);
+	--table-header-background: var(--cyan1);
 	--table-header-color: var(--white);
 }
 
@@ -50,9 +50,9 @@
 	--background-secondary: var(--white-hard);
 	--background-secondary-alt: var(--white);
 
-	--background-modifier-error: var(--red2);
-	--background-modifier-success: var(--green2);
-	--background-modifier-message: var(--blue2);
+	--background-modifier-error: var(--red1);
+	--background-modifier-success: var(--green1);
+	--background-modifier-message: var(--blue1);
 
 	--text-success: var(--green);
 	--text-warning: var(--orange);
@@ -90,31 +90,31 @@
 
 :root {
 	/* color definitions */
-	--dark_grey: #505354;
+	--dark_grey: #2e2e2e;
 	--grey: #686b6c;
 	--white: #faebd7;
 	--white-soft: #f4ece2;
-	--white-hard: #ebddc9;
+	--white-hard: #fffaf2;
 	--white-muted: #e0d1be;
 	--white-faint: #c4b6a3;
-	--black: #353839;
-	--black-soft: #393c3d;
-	--black-hard: #2e3132;
-	--green: #177245;
-	--red: #ba1d58;
-	--yellow: #967117;
-	--blue: #26619c;
-	--magenta: #721772;
-	--cyan: #176372;
+	--black: #252321;
+	--black-soft: #23191e;
+	--black-hard: #030106;
+	--green: #196f18;
+	--red: #b62625;
+	--yellow: #94601e;
+	--blue: #1a5bc4;
+	--magenta: #9932cc;
+	--cyan: #007575;
 	--orange: #c04000;
 
-	--green1: #378c5d;
-	--red1: #d94070;
-	--yellow1: #b38a32;
-	--blue1: #477ab7;
-	--magenta1: #8d348c;
-	--cyan1: #377c8b;
-	--orange1: #e05b1f;
+	--green1: #38c283;
+	--red1: #ff7c7c;
+	--yellow1: #baaf43;
+	--blue1: #79b4da;
+	--magenta1: #f56df6;
+	--cyan1: #4bb9b4;
+	--orange1: #ff8936;
 
 	--green2: #53a776;
 	--red2: #f85e89;
