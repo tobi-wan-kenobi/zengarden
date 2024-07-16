@@ -107,28 +107,28 @@ end
 
 local variants = {
   cyan = {
-    fg = colors.verdigris,
-    bg = colors.teal,
+    bg = colors.verdigris,
+    fg = colors.teal,
   },
   orange = {
-    fg = colors.daylily,
-    bg = colors.mahagony,
+    bg = colors.daylily,
+    fg = colors.mahagony,
   },
   yellow = {
-    fg = colors.sand,
-    bg = colors.bronze,
+    bg = colors.sand,
+    fg = colors.bronze,
   },
   magenta = {
-    fg = colors.flamingo,
-    bg = colors.orchid,
+    bg = colors.flamingo,
+    fg = colors.orchid,
   },
   blue = {
-    fg = colors.pond,
-    bg = colors.saphhire,
+    bg = colors.pond,
+    fg = colors.saphhire,
   },
   green = {
-    fg = colors.jade,
-    bg = colors.emerald,
+    bg = colors.jade,
+    fg = colors.emerald,
   },
 }
 
