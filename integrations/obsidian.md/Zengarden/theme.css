@@ -1,9 +1,9 @@
 .theme-dark {
 	--text-normal: var(--white);
-	--text-muted: var(--grey);
-	--text-faint: var(--white-faint);
-	--background-primary: var(--black-hard);
-	--background-primary-alt: var(--black);
+	--text-muted: var(--white-faint);
+	--text-faint: var(--white-soft);
+	--background-primary: var(--black);
+	--background-primary-alt: var(--black-alt);
 	--background-secondary: var(--black);
 	--background-secondary-alt: var(--black-soft);
 
@@ -15,7 +15,7 @@
 	--text-warning: var(--orange1);
 	--text-error: var(--red1);
 
-	--header-color: var(--yellow1);
+	--header-color: var(--orange1);
 
 	--link-color: var(--cyan1);
 	--link-external-color: var(--cyan1);
@@ -38,6 +38,7 @@
 	--table-border-width: 1px;
 	--table-border-color: var(--cyan1);
 	--table-header-background: var(--cyan1);
+	--table-header-background-hover: var(--cyan);
 	--table-header-color: var(--white);
 }
 
@@ -58,7 +59,7 @@
 	--text-warning: var(--orange);
 	--text-error: var(--red);
 
-	--header-color: var(--yellow);
+	--header-color: var(--orange);
 
 	--link-color: var(--cyan);
 	--link-external-color: var(--cyan);
@@ -81,6 +82,7 @@
 	--table-border-width: 1px;
 	--table-border-color: var(--cyan);
 	--table-header-background: var(--cyan);
+	--table-header-background-hover: var(--cyan1);
 	--table-header-color: var(--white);
 }
 
@@ -93,11 +95,12 @@
 	--dark_grey: #2e2e2e;
 	--grey: #686b6c;
 	--white: #faebd7;
-	--white-soft: #f4ece2;
-	--white-hard: #fffaf2;
+	--white-soft: #d7d9c3;
+	--white-hard: #f8f7f2;
 	--white-muted: #e0d1be;
 	--white-faint: #c4b6a3;
 	--black: #252321;
+	--black-alt: #343434;
 	--black-soft: #23191e;
 	--black-hard: #030106;
 	--green: #196f18;
@@ -108,21 +111,20 @@
 	--cyan: #007575;
 	--orange: #c04000;
 
-	--green1: #38c283;
-	--red1: #ff7c7c;
+	--green1: #00a661;
+	--red1: #e36364;
 	--yellow1: #baaf43;
-	--blue1: #79b4da;
-	--magenta1: #f56df6;
-	--cyan1: #4bb9b4;
+	--blue1: #5e98bd;
+	--magenta1: #d952db;
+	--cyan1: #2fa39e;
 	--orange1: #ff8936;
 
-	--green2: #53a776;
-	--red2: #f85e89;
-	--yellow2: #d0a44c;
-	--blue2: #6493d3;
-	--magenta2: #a94fa6;
-	--cyan2: #5396a6;
-	--orange2: #ff7639;
+	--green2: #8abe80;
+	--red2: #db9ea5;
+	--yellow2: #b8935f;
+	--blue2: #7aa8bf;
+	--magenta2: #ebd2d8;
+	--orange2: #e3c28d;
 }
 
 body {
