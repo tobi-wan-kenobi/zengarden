@@ -67,8 +67,6 @@ Currently, you can set the following parameters:
 | orange (dark)   | Mahagony   | #c04000   | 54.85/0.173/39.51 | - | 4.51 |
 | magenta (dark)  | Orchid     | #9932cc   | 54.11/0.227/311.51 | - | 4.86 |
 | cyan (dark)     | Teal       | #007575   | 50.92/0.087/194.77 | - | 4.71 |
-| ???    | Bamboo     | #076745   | 45.46/0.098/161.47 | - | 5.9 |
-| ???      | Cherry     | #a52138   | 47.52/0.166/17.4   | - | 6.23  |
 | red (light)     | Coral      | #ff7c7c   | 73.79/0.16/21.74   | 6.28 | - |
 | blue (light)    | Pond       | #79b4da   | 74.36/0.08/237.63  | 6.97 | - |
 | green (light)   | Jade       | #38c283   | 72.48/0.14/158.77  | 6.68 | - |
@@ -76,8 +74,6 @@ Currently, you can set the following parameters:
 | orange (light)  | Daylily    | #ff8936   | 74.79/0.169/41.48  | 6.62 | - |
 | magenta (light) | Flamingo   | #f56df6   | 74.76/0.229/327.24 | 6.26 | - |
 | cyan (light)    | Verdigris  | #4bb9b4   | 72.25/0.1/190.95 | 6.63 | - |
-| ???         | Sakura     | #ffa7a6   | 81.47/0.104/20.29  | 8.44  | - |
-| ???         | Amber      | #ffbf00   | 84.03/0.172/84.08 | 9.47 | - |
 
 
 ![ZenGarden palette](images/zengarden_palette.png)

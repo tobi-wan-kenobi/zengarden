@@ -34,39 +34,66 @@ local function shade(color, value)
 end
 
 local colors = {
+  -- blacks, whites, greys
   onyx = hsl("#030106"),
   obsidian = hsl("#000602"),
   rock = hsl("#2e2e2e"),
   basalt = hsl("#242020"),
   black_chestnut = hsl("#252321"),
   kurobeni = hsl("#23191e"),
-  gravel = hsl("#686b6c"),
   ivory = hsl("#faebd7"),
   ivory_light = hsl("#fffaf2"),
-  sakura = hsl("#ffa7a6"),
-  cherry = hsl("#a52138"),
+  gravel = hsl("#686b6c"),
+
+  -- for light background
   brick = hsl("#b62625"),
-  sapphire = hsl("#1a5bc4"),
-  bamboo = hsl("#076745"),
-  emerald = hsl("#196f18"),
-  sand = hsl("#baaf43"),
-  bronze = hsl("#94601e"),
-  daylily = hsl("#ff8936"),
   mahagony = hsl("#c04000"),
+  sapphire = hsl("#1a5bc4"),
+  bronze = hsl("#94601e"),
+  emerald = hsl("#196f18"),
   orchid = hsl("#9932cc"),
   teal = hsl("#007575"),
 
+  -- for dark background
   coral = hsl("#e36364"),
+  daylily = hsl("#ff8936"),
   pond = hsl("#5e98bd"),
+  sand = hsl("#baaf43"),
   jade = hsl("#00a661"),
   flamingo = hsl("#d952db"),
   verdigris = hsl("#2fa39e"),
+
+  -- alternatives/highlights
+  cherry = hsl("#a52138"),
+  bamboo = hsl("#076745"),
+  sakura = hsl("#ffa7a6"),
+  white_dove = hsl("#f8f7f2"),
+  mist = hsl("#dddddd"),
+  lake = hsl("#7aa8bf"),
+  sunset = hsl("#e4c9c2"),
+  lotus = hsl("#ebd2d8"),
+  orchid_light = hsl("#db9ea5"),
+  riverstone = hsl("#cccccc"),
+  wood = hsl("#b8935f"),
+  bamboowood = hsl("#e3c28d"),
+  salt = hsl("#eed3be"),
+  sandstone = hsl("#e8d8c1"),
+  candle = hsl("#f4ede3"),
+  natural = hsl("#d7d9c3"),
+  bamboowood = hsl("#aac171"),
+  garden = hsl("#8abe80"),
+  succulent = hsl("#8ea18d"),
+  naturalstone = hsl("#b2a9ac"),
+  concrete = hsl("#808080"),
+  oldwood = hsl("#71645e"),
+  jet = hsl("#343434"),
 }
 
 local themes = {
   dark = {
     fg = colors.ivory,
     bg = colors.black_chestnut,
+    bg_alt = colors.jet,
     comments = colors.gravel,
     blue = colors.pond,
     red = colors.coral,
@@ -84,6 +111,7 @@ local themes = {
   light = {
     fg = colors.rock,
     bg = colors.ivory,
+    bg_alt = colors.natural,
     comments = colors.gravel,
     blue = colors.sapphire,
     red = colors.brick,
@@ -146,14 +174,14 @@ local variant = variants[config.variant]
 local theme = lush(function(injected_functions)
   local sym = injected_functions.sym
   return {
-    ColorColumn    { bg = theme.bg.lighten(5) }, -- Columns set with "colorcolumn"
+    ColorColumn    { bg = theme.bg_alt }, -- Columns set with "colorcolumn"
     -- Conceal        { }, -- Placeholder characters substituted for concealed text (see "conceallevel")
     -- Cursor         { }, -- Character under the cursor
     CurSearch      { gui = "bold,reverse" }, -- Highlighting a search pattern under the cursor (see "hlsearch")
     -- lCursor        { }, -- Character under the cursor when |language-mapping| is used (see "guicursor")
     -- CursorIM       { }, -- Like Cursor, but used when in IME mode |CursorIM|
-    CursorColumn   { bg = theme.bg.lighten(5) }, -- Screen-column at the cursor, when "cursorcolumn" is set.
-    CursorLine     { bg = theme.bg.lighten(5) }, -- Screen-line at the cursor, when "cursorline" is set. Low-priority if foreground (ctermfg OR guifg) is not set.
+    CursorColumn   { bg = theme.bg_alt }, -- Screen-column at the cursor, when "cursorcolumn" is set.
+    CursorLine     { bg = theme.bg_alt }, -- Screen-line at the cursor, when "cursorline" is set. Low-priority if foreground (ctermfg OR guifg) is not set.
     Directory      { fg = theme.blue, gui = "bold" }, -- Directory names (and other special names in listings)
     DiffAdd        { fg = theme.green }, -- Diff mode: Added line |diff.txt|
     DiffChange     { fg = theme.blue }, -- Diff mode: Changed line |diff.txt|
@@ -164,7 +192,7 @@ local theme = lush(function(injected_functions)
     -- TermCursorNC   { }, -- Cursor in an unfocused terminal
     ErrorMsg       { bg = theme.error, fg = theme.bg }, -- Error messages on the command line
     VertSplit      { fg = theme.fg }, -- Column separating vertically split windows
-    Folded         { bg = theme.bg.lighten(10) }, -- Line used for closed folds
+    Folded         { bg = theme.bg_alt }, -- Line used for closed folds
     FoldColumn     { fg = theme.blue, gui = "bold" }, -- "foldcolumn"
     SignColumn     { }, -- Column where |signs| are displayed
     IncSearch      { bg = theme.yellow, fg = theme.bg }, -- "incsearch" highlighting; also used for the text replaced with ":s///c"
@@ -182,14 +210,14 @@ local theme = lush(function(injected_functions)
     -- MoreMsg        { }, -- |more-prompt|
     NonText        { fg = theme.comments }, -- "@" at the end of the window, characters from "showbreak" and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn"t fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal         { fg = theme.fg, bg = theme.bg }, -- Normal text
-    NormalFloat    { fg = shade(theme.fg, 15), bg = shade(theme.bg, 15) }, -- Normal text in floating windows.
-    FloatBorder    { fg = shade(theme.bg, 15), bg = shade(theme.bg, 15) }, -- Border of floating windows.
+    NormalFloat    { fg = theme.fg, bg = theme.bg_alt }, -- Normal text in floating windows.
+    FloatBorder    { fg = theme.bg, bg = theme.bg }, -- Border of floating windows.
     FloatTitle     { fg = variant.fg, gui = "bold" }, -- Title of floating windows.
     -- NormalNC       { }, -- normal text in non-current windows
-    Pmenu          { fg = shade(theme.fg, 15), bg = shade(theme.bg, 15) }, -- Popup menu: Normal item.
-    PmenuSel       { fg = colors.white, bg = variant.bg }, -- Popup menu: Selected item.
+    Pmenu          { fg = theme.fg, bg = theme.bg_alt }, -- Popup menu: Normal item.
+    PmenuSel       { fg = variant.fg, bg = theme.bg }, -- Popup menu: Selected item.
     -- PmenuKind      { }, -- Popup menu: Normal item "kind"
-    -- PmenuKindSel   { }, -- Popup menu: Selected item "kind"
+    PmenuKindSel   { fg = variant.fg, bg = theme.bg_alt }, -- Popup menu: Selected item "kind"
     -- PmenuExtra     { }, -- Popup menu: Normal item "extra text"
     -- PmenuExtraSel  { }, -- Popup menu: Selected item "extra text"
     PmenuSbar      { bg = variant.fg }, -- Popup menu: Scrollbar.
