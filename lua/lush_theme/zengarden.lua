@@ -205,7 +205,7 @@ local theme = lush(function(injected_functions)
     -- CursorLineSign { }, -- Like SignColumn when "cursorline" is set for the cursor line
     MatchParen     { fg = variant.fg, gui = "bold" }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     -- ModeMsg        { }, -- "showmode" message (e.g., "-- INSERT -- ")
-    MsgArea        { bg = theme.bg.darken(10) }, -- Area for messages and cmdline
+    MsgArea        { bg = theme.bg, gui = "italic" }, -- Area for messages and cmdline
     -- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of "display"
     -- MoreMsg        { }, -- |more-prompt|
     NonText        { fg = theme.comments }, -- "@" at the end of the window, characters from "showbreak" and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn"t fit at the end of the line). See also |hl-EndOfBuffer|.
@@ -286,7 +286,7 @@ local theme = lush(function(injected_functions)
     -- Typedef        { }, --   A typedef
 
     Special        { fg = theme.orange }, -- (*) Any special symbol
-    SpecialChar    { fg = shade(theme.orange, 15) }, --   Special character in a constant
+    SpecialChar    { fg = shade(theme.orange, 25) }, --   Special character in a constant
     -- Tag            { }, --   You can use CTRL-] on this
     -- Delimiter      { }, --   Character that needs attention
     -- SpecialComment { }, --   Special things inside a comment (e.g. "\n")
