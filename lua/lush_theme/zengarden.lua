@@ -35,128 +35,133 @@ end
 
 local colors = {
   -- blacks, whites, greys
-  onyx = hsl("#030106"),
-  obsidian = hsl("#000602"),
-  rock = hsl("#2e2e2e"),
-  basalt = hsl("#242020"),
-  black_chestnut = hsl("#252321"),
-  kurobeni = hsl("#23191e"),
   ivory = hsl("#faebd7"),
-  ivory_light = hsl("#fffaf2"),
+  mist = hsl("#dddddd"),
+  stone = hsl("#b2a9ac"),
+  basalt = hsl("#242020"),
+  jet = hsl("#343434"),
+  slate = hsl("#353839"),
   gravel = hsl("#686b6c"),
 
-  -- for light background
-  brick = hsl("#b62625"),
-  mahagony = hsl("#c04000"),
-  sapphire = hsl("#1a5bc4"),
-  bronze = hsl("#94601e"),
-  emerald = hsl("#196f18"),
-  orchid = hsl("#9932cc"),
-  teal = hsl("#007575"),
+  onyx = hsl("#030106"),
+  rock = hsl("#2e2e2e"),
+  obsidian = hsl("#000602"),
+  black_chestnut = hsl("#252321"),
+  kurobeni = hsl("#23191e"),
+  ivory_light = hsl("#fffaf2"),
 
-  -- for dark background
-  coral = hsl("#e36364"),
-  daylily = hsl("#ff8936"),
-  pond = hsl("#5e98bd"),
-  sand = hsl("#baaf43"),
-  jade = hsl("#00a661"),
-  flamingo = hsl("#d952db"),
-  verdigris = hsl("#2fa39e"),
+  dark = {
+    pond = hsl("#4e98c5"),
+    lake = hsl("#5fb3db"),
+    coral = hsl("#c57673"),
+    terracotta = hsl("#df907f"),
+    bamboo = hsl("#50a27c"),
+    shamrock = hsl("#74ba8b"),
+    sand = hsl("#a78c41"),
+    triandra_grass = hsl("#c4a35a"),
+    lavender = hsl("#a27ebd"),
+    bright_lavender = hsl("#b997d9"),
+    sea_green = hsl("#2da29e"),
+    verdigris = hsl("#4ebcb7"),
+    clay = hsl("#bf7e52"),
+    fallen_leaves = hsl("#d09c5f"),
 
-  -- alternatives/highlights
-  cherry = hsl("#a52138"),
-  bamboo = hsl("#076745"),
-  sakura = hsl("#ffa7a6"),
-  white_dove = hsl("#f8f7f2"),
-  mist = hsl("#dddddd"),
-  lake = hsl("#7aa8bf"),
-  sunset = hsl("#e4c9c2"),
-  lotus = hsl("#ebd2d8"),
-  orchid_light = hsl("#db9ea5"),
-  riverstone = hsl("#cccccc"),
-  wood = hsl("#b8935f"),
-  bamboowood = hsl("#e3c28d"),
-  salt = hsl("#eed3be"),
-  sandstone = hsl("#e8d8c1"),
-  candle = hsl("#f4ede3"),
-  natural = hsl("#d7d9c3"),
-  bamboowood = hsl("#aac171"),
-  garden = hsl("#8abe80"),
-  succulent = hsl("#8ea18d"),
-  naturalstone = hsl("#b2a9ac"),
-  concrete = hsl("#808080"),
-  oldwood = hsl("#71645e"),
-  jet = hsl("#343434"),
+    -- alts & additions
+    sakura = hsl("#c57675"),
+    lotus = hsl("#c1758b"),
+    sunset = hsl("#c47865"),
+    sunray = hsl("#919549"),
+    oldwood = hsl("#c17b59"),
+    redwood = hsl("#c07c56"),
+    cherry = hsl("#c57579"),
+    jade = hsl("#54a279"),
+  },
+  light = {
+    pond = hsl("#4e98c5"),
+    lake = hsl("#5fb3db"),
+    coral = hsl("#c57673"),
+    terracotta = hsl("#df907f"),
+    bamboo = hsl("#50a27c"),
+    shamrock = hsl("#74ba8b"),
+    sand = hsl("#a78c41"),
+    triandra_grass = hsl("#c4a35a"),
+    lavender = hsl("#a27ebd"),
+    bright_lavender = hsl("#b997d9"),
+    sea_green = hsl("#2da29e"),
+    verdigris = hsl("#4ebcb7"),
+    clay = hsl("#bf7e52"),
+    fallen_leaves = hsl("#d09c5f"),
+
+    -- alts & additions
+    sakura = hsl("#c57675"),
+    lotus = hsl("#c1758b"),
+    sunset = hsl("#c47865"),
+    sunray = hsl("#919549"),
+    oldwood = hsl("#c17b59"),
+    redwood = hsl("#c07c56"),
+    cherry = hsl("#c57579"),
+    jade = hsl("#54a279"),
+  },
 }
 
 local themes = {
   dark = {
     fg = colors.ivory,
-    bg = colors.black_chestnut,
+    fg_dim = colors.stone,
+    bg = colors.basalt,
     bg_alt = colors.jet,
     comments = colors.gravel,
-    blue = colors.pond,
-    red = colors.coral,
-    green = colors.jade,
-    orange = colors.daylily,
-    magenta = colors.flamingo,
-    yellow = colors.sand,
-    cyan = colors.verdigris,
-    error = colors.coral,
-    warn = colors.daylily,
-    info = colors.pond,
-    hint = colors.verdigris,
-    ok = colors.jade,
+    error = colors.dark.coral,
+    info = colors.dark.pond,
+    hint = colors.dark.sea_green,
+    ok = colors.dark.bamboo,
+    warn = colors.dark.sunray,
   },
   light = {
-    fg = colors.rock,
+    fg = colors.basalt,
+    fg_dim = colors.stone,
     bg = colors.ivory,
-    bg_alt = colors.natural,
+    bg_alt = colors.jet,
     comments = colors.gravel,
-    blue = colors.sapphire,
-    red = colors.brick,
-    green = colors.emerald,
-    orange = colors.mahagony,
-    magenta = colors.orchid,
-    cyan = colors.teal,
-    yellow = colors.bronze,
-    error = colors.brick,
-    warn = colors.mahagony,
-    info = colors.sapphire,
-    hint = colors.teal,
-    ok = colors.emerald,
+    error = colors.dark.terracotta,
+    info = colors.dark.lake,
+    hint = colors.dark.verdigris,
+    ok = colors.dark.shamrock,
+    warn = colors.dark.fallen_leaves,
   },
 }
 
 local theme = themes.dark
+local color = colors.dark
 if vim.o.background == "light" then
+  color = colors.light
   theme = themes.light
 end
 
 local variants = {
   cyan = {
-    bg = colors.verdigris,
-    fg = colors.teal,
+    bg = color.sea_green,
+    fg = color.verdigris,
   },
   orange = {
-    bg = colors.daylily,
-    fg = colors.mahagony,
+    bg = color.clay,
+    fg = color.fallen_leaves,
   },
   yellow = {
-    bg = colors.sand,
-    fg = colors.bronze,
+    bg = color.sand,
+    fg = color.triandra_grass,
   },
   magenta = {
-    bg = colors.flamingo,
-    fg = colors.orchid,
+    bg = color.lavender,
+    fg = color.bright_lavender,
   },
   blue = {
-    bg = colors.pond,
-    fg = colors.saphhire,
+    bg = color.pond,
+    fg = color.lake,
   },
   green = {
-    bg = colors.jade,
-    fg = colors.emerald,
+    bg = color.bamboo,
+    fg = color.shamrock,
   },
 }
 
@@ -182,51 +187,51 @@ local theme = lush(function(injected_functions)
     -- CursorIM       { }, -- Like Cursor, but used when in IME mode |CursorIM|
     CursorColumn   { bg = theme.bg_alt }, -- Screen-column at the cursor, when "cursorcolumn" is set.
     CursorLine     { bg = theme.bg_alt }, -- Screen-line at the cursor, when "cursorline" is set. Low-priority if foreground (ctermfg OR guifg) is not set.
-    Directory      { fg = theme.blue, gui = "bold" }, -- Directory names (and other special names in listings)
-    DiffAdd        { fg = theme.green }, -- Diff mode: Added line |diff.txt|
-    DiffChange     { fg = theme.blue }, -- Diff mode: Changed line |diff.txt|
-    DiffDelete     { fg = theme.red }, -- Diff mode: Deleted line |diff.txt|
-    DiffText       { fg = theme.orange }, -- Diff mode: Changed text within a changed line |diff.txt|
+    Directory      { fg = color.pond, gui = "bold" }, -- Directory names (and other special names in listings)
+    DiffAdd        { fg = color.bamboo }, -- Diff mode: Added line |diff.txt|
+    DiffChange     { fg = color.pond }, -- Diff mode: Changed line |diff.txt|
+    DiffDelete     { fg = color.coral }, -- Diff mode: Deleted line |diff.txt|
+    DiffText       { fg = color.sunray }, -- Diff mode: Changed text within a changed line |diff.txt|
     -- EndOfBuffer    { }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
     -- TermCursor     { }, -- Cursor in a focused terminal
     -- TermCursorNC   { }, -- Cursor in an unfocused terminal
     ErrorMsg       { bg = theme.error, fg = theme.bg }, -- Error messages on the command line
-    VertSplit      { fg = theme.fg }, -- Column separating vertically split windows
+    VertSplit      { fg = theme.fg_dim }, -- Column separating vertically split windows
     Folded         { bg = theme.bg_alt }, -- Line used for closed folds
-    FoldColumn     { fg = theme.blue, gui = "bold" }, -- "foldcolumn"
-    SignColumn     { }, -- Column where |signs| are displayed
-    IncSearch      { bg = theme.yellow, fg = theme.bg }, -- "incsearch" highlighting; also used for the text replaced with ":s///c"
+    FoldColumn     { fg = color.lake }, -- "foldcolumn"
+    SignColumn     { bg = theme.bg }, -- Column where |signs| are displayed
+    IncSearch      { bg = color.sand, fg = theme.bg }, -- "incsearch" highlighting; also used for the text replaced with ":s///c"
     -- Substitute     { }, -- |:substitute| replacement text highlighting
     LineNr         { fg = theme.comments }, -- Line number for ":number" and ":#" commands, and when "number" or "relativenumber" option is set.
-    LineNrAbove    { fg = theme.red }, -- Line number for when the "relativenumber" option is set, above the cursor line
-    LineNrBelow    { fg = theme.green }, -- Line number for when the "relativenumber" option is set, below the cursor line
-    CursorLineNr   { gui = "bold" }, -- Like LineNr when "cursorline" or "relativenumber" is set for the cursor line.
+    LineNrAbove    { fg = color.terracotta }, -- Line number for when the "relativenumber" option is set, above the cursor line
+    LineNrBelow    { fg = color.shamrock }, -- Line number for when the "relativenumber" option is set, below the cursor line
+    CursorLineNr   { fg = theme.fg_dim, bg = theme.bg_alt }, -- Like LineNr when "cursorline" or "relativenumber" is set for the cursor line.
     -- CursorLineFold { }, -- Like FoldColumn when "cursorline" is set for the cursor line
     -- CursorLineSign { }, -- Like SignColumn when "cursorline" is set for the cursor line
-    MatchParen     { fg = variant.fg, gui = "bold" }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    MatchParen     { fg = variant.bg }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     -- ModeMsg        { }, -- "showmode" message (e.g., "-- INSERT -- ")
-    MsgArea        { bg = theme.bg, gui = "italic" }, -- Area for messages and cmdline
+    MsgArea        { bg = theme.bg, fg = theme.fg_dim }, -- Area for messages and cmdline
     -- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of "display"
     -- MoreMsg        { }, -- |more-prompt|
     NonText        { fg = theme.comments }, -- "@" at the end of the window, characters from "showbreak" and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn"t fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal         { fg = theme.fg, bg = theme.bg }, -- Normal text
     NormalFloat    { fg = theme.fg, bg = theme.bg_alt }, -- Normal text in floating windows.
-    FloatBorder    { fg = theme.bg, bg = theme.bg }, -- Border of floating windows.
-    FloatTitle     { fg = variant.fg, gui = "bold" }, -- Title of floating windows.
+    FloatBorder    { fg = theme.fg_dim, bg = theme.bg }, -- Border of floating windows.
+    FloatTitle     { fg = variant.fg }, -- Title of floating windows.
     -- NormalNC       { }, -- normal text in non-current windows
     Pmenu          { fg = theme.fg, bg = theme.bg_alt }, -- Popup menu: Normal item.
-    PmenuSel       { fg = variant.fg, bg = theme.bg }, -- Popup menu: Selected item.
+    PmenuSel       { fg = variant.fg, bg = theme.bg_alt }, -- Popup menu: Selected item.
     -- PmenuKind      { }, -- Popup menu: Normal item "kind"
     PmenuKindSel   { fg = variant.fg, bg = theme.bg_alt }, -- Popup menu: Selected item "kind"
     -- PmenuExtra     { }, -- Popup menu: Normal item "extra text"
     -- PmenuExtraSel  { }, -- Popup menu: Selected item "extra text"
-    PmenuSbar      { bg = variant.fg }, -- Popup menu: Scrollbar.
-    PmenuThumb     { bg = variant.bg }, -- Popup menu: Thumb of the scrollbar.
+    PmenuSbar      { bg = colors.gravel }, -- Popup menu: Scrollbar.
+    PmenuThumb     { bg = variant.fg }, -- Popup menu: Thumb of the scrollbar.
     Question       { fg = theme.fg, bg = theme.ok, gui = "bold" }, -- |hit-enter| prompt and yes/no questions
     -- QuickFixLine   { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     --Search       { bg = yellow.darken(25), fg = bg }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
-    Search       { gui = "underline,bold" }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
-    SpecialKey     { fg = theme.orange }, -- Unprintable characters: text displayed differently from what it really is. But not "listchars" whitespace. |hl-Whitespace|
+    Search       { fg = color.triandra_grass, bg = theme.bg_alt, gui = "underline,bold" }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
+    SpecialKey     { fg = color.clay }, -- Unprintable characters: text displayed differently from what it really is. But not "listchars" whitespace. |hl-Whitespace|
     -- SpellBad       { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     -- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     -- SpellLocal     { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
@@ -256,37 +261,37 @@ local theme = lush(function(injected_functions)
 
     Comment        { fg = theme.comments }, -- Any comment
 
-    Constant       { fg = theme.green }, -- (*) Any constant
-    String         { fg = theme.green }, --   A string constant: "this is a string"
-    Character      { fg = theme.magenta }, --   A character constant: "c", "\n"
-    Number         { fg = theme.yellow }, --   A number constant: 234, 0xff
-    Boolean        { fg = theme.blue }, --   A boolean constant: TRUE, false
-    Float          { fg = theme.yellow }, --   A floating point constant: 2.3e10
+    Constant       { fg = color.clay }, -- (*) Any constant
+    String         { fg = color.bamboo }, --   A string constant: "this is a string"
+    Character      { fg = color.lavender }, --   A character constant: "c", "\n"
+    Number         { fg = color.sand }, --   A number constant: 234, 0xff
+    Boolean        { fg = color.lake }, --   A boolean constant: TRUE, false
+    Float          { fg = color.triandra_grass }, --   A floating point constant: 2.3e10
 
-    Identifier     { fg = theme.yellow }, -- (*) Any variable name
-    Function       { fg = theme.cyan }, --   Function name (also: methods for classes)
+    Identifier     { fg = color.sunray }, -- (*) Any variable name
+    Function       { fg = color.sea_green }, --   Function name (also: methods for classes)
 
-    Statement      { fg = theme.red }, -- (*) Any statement
+    Statement      { fg = color.jade }, -- (*) Any statement
     -- Conditional    { }, --   if, then, else, endif, switch, etc.
     -- Repeat         { }, --   for, do, while, etc.
     -- Label          { }, --   case, default, etc.
     -- Operator       { }, --   "sizeof", "+", "*", etc.
-    Keyword        { fg = theme.yellow }, --   any other keyword
-    Exception      { fg = theme.red }, --   try, catch, throw
+    Keyword        { fg = color.sand }, --   any other keyword
+    Exception      { fg = color.lotus }, --   try, catch, throw
 
-    PreProc        { fg = theme.blue }, -- (*) Generic Preprocessor
+    PreProc        { fg = color.pond }, -- (*) Generic Preprocessor
     -- Include        { }, --   Preprocessor #include
     -- Define         { }, --   Preprocessor #define
     -- Macro          { }, --   Same as Define
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-    Type           { fg = theme.yellow }, -- (*) int, long, char, etc.
-    StorageClass   { fg = theme.yellow }, --   static, register, volatile, etc.
+    Type           { fg = color.triandra_grass }, -- (*) int, long, char, etc.
+    StorageClass   { fg = color.triandra_grass }, --   static, register, volatile, etc.
     -- Structure      { }, --   struct, union, enum, etc.
     -- Typedef        { }, --   A typedef
 
-    Special        { fg = theme.orange }, -- (*) Any special symbol
-    SpecialChar    { fg = shade(theme.orange, 25) }, --   Special character in a constant
+    Special        { fg = color.clay }, -- (*) Any special symbol
+    SpecialChar    { fg = shade(color.clay, 25) }, --   Special character in a constant
     -- Tag            { }, --   You can use CTRL-] on this
     -- Delimiter      { }, --   Character that needs attention
     -- SpecialComment { }, --   Special things inside a comment (e.g. "\n")
@@ -295,7 +300,7 @@ local theme = lush(function(injected_functions)
     -- Underlined     { gui = "underline" }, -- Text that stands out, HTML links
     -- Ignore         { }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
     Error          { bg = theme.error, fg = theme.bg }, -- Any erroneous construct
-    Todo           { bg = theme.yellow, fg = theme.bg }, -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo           { bg = color.triandra_grass, fg = theme.bg }, -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     -- These groups are for the native LSP client and diagnostic system. Some
     -- other LSP clients may use these groups, or use their own. Consult your
     -- LSP client"s documentation.
@@ -387,16 +392,18 @@ local theme = lush(function(injected_functions)
     -- sym"@repeat"            { }, -- Repeat
     -- sym"@label"             { }, -- Label
     -- sym"@operator"          { }, -- Operator
-    sym"@keyword"           { fg = theme.blue }, -- Keyword
+    sym"@keyword"           { fg = color.sand }, -- Keyword
+    sym"@keyword.import"    { fg = color.pond },
+    sym"@lsp.type.namespace" { fg = color.pond },
     -- sym"@exception"         { }, -- Exception
     sym"@variable"          { fg = theme.fg }, -- Identifier
     -- sym"@type"              { }, -- Type
     -- sym"@type.definition"   { }, -- Typedef
     -- sym"@storageclass"      { }, -- StorageClass
     -- sym"@structure"         { }, -- Structure
-    sym"@namespace"         { fg = theme.blue }, -- Identifier
-    sym"@include"           { fg = theme.blue }, -- Include
-    sym"@preproc"           { fg = theme.blue }, -- PreProc
+    sym"@namespace"         { fg = color.lake }, -- Identifier
+    sym"@include"           { fg = color.pond }, -- Include
+    sym"@preproc"           { fg = color.pond }, -- PreProc
     -- sym"@debug"             { }, -- Debug
     -- sym"@tag"               { }, -- Tag
 }
