@@ -70,8 +70,8 @@ Lightness = 65 (73 for light)
 | cyan (light)    | Verdigris       | #43b3ae   | 70.25/0.1/190.95  | 6.37 |
 
 ## Light
-Chroma = 1
-Lightness = 65 (73 for light)
+Chroma = 0.1
+Lightness = 50 (60 for light)
 
 | Purpose         | Color Name      | Hex Value | OKLCH | Contrast (background) |
 | --------------- | --------------- | --------- | ----- | --------------------- |
