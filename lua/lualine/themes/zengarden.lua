@@ -1,31 +1,33 @@
 local dark = {
   fg           = "#faebd7",
-  bg           = "#252321",
-  bg_dim       = "#343434",
-  bg_dim2      = "#2e2e2e",
-  black        = "#252321",
+  bg           = "#242020",
+  bg_dim       = "#252321",
+  bg_dim2      = "#353839",
+  black        = "#242020",
   white        = "#faebd7",
   grey         = "#686b6c",
-  red          = "#e36364",
-  blue         = "#5e98bd",
-  magenta      = "#d952db",
-  orange       = "#ff8936",
-  cyan         = "#2fa39e",
+  bg_active    = "#b2a9ac",
+  red          = "#c57673",
+  blue         = "#4e98c5",
+  magenta      = "#a27ebd",
+  orange       = "#bf7e52",
+  cyan         = "#2da29e",
 }
 
 local light = {
-  fg           = "#252321",
+  fg           = "#242020",
   bg           = "#faebd7",
-  bg_dim       = "#d7d9c3",
+  bg_dim       = "#dddddd",
   bg_dim2      = "#e8d8c1",
-  black        = "#252321",
+  bg_active    = "#353839",
+  black        = "#242020",
   white        = "#faebd7",
-  red          = "#b62625",
-  blue         = "#1a5bc4",
+  red          = "#944a48",
+  blue         = "#1a6b95",
   grey         = "#686b6c",
-  magenta      = "#9932cc",
-  orange       = "#c04000",
-  cyan         = "#007575",
+  magenta      = "#75528e",
+  orange       = "#8e5225",
+  cyan         = "#00726f",
 }
 
 local theme = dark
@@ -35,7 +37,7 @@ end
 
 return {
   normal = {
-    a = { bg = theme.grey, fg = theme.bg },
+    a = { bg = theme.bg_active, fg = theme.bg },
     b = { bg = theme.bg_dim, fg = theme.fg },
     c = { bg = theme.bg_dim2, fg = theme.fg }
   },
