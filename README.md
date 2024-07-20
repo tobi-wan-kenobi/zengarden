@@ -94,7 +94,7 @@ Currently, you can set the following parameters:
 | background (alt) | Jet             | `#343434`   | - | - |
 | foreground       | Ivory           | `#faebd7`   | - | - |
 | foreground (dim) | Almond (dim)    | `#e8d8c1`   | - | - |
-| blue (base)      | Pond            | `#4e98c5`   | | |
+| blue (base)      | Pond            | $\colorbox{#242020}{{\color{#4e98c5}{#4e98c5}}}$ | | |
 | blue (light)     | Lake            | `#5fb3db`   | | |
 | red (base)       | Coral           | `#c57673`   | | |
 | red (light)      | Terracotta      | `#df907f`   | | |
