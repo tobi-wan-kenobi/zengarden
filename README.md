@@ -43,47 +43,82 @@ Optionally, you can call `setup()` on the module to set parameters:
 
 Currently, you can set the following parameters:
 
-* `variant`: sets highlight colors for float, menu, etc. to one of: `cyan` (the default),
-    `yellow`, `orange`, `magenta`, `green`
+* `variant`: sets highlight colors for float, menu, etc. to one of: `yellow` (the default),
+    `cyan`, `orange`, `magenta`, `green`
 * `italics`: whether italics should be used (default) or not, boolean value
 
-# 
-## Dark
-Chroma = 0.1
-Lightness = 65 (73 for light)
+# Palette
 
-| Purpose         | Color Name      | Hex Value | OKLCH | Contrast (background) |
-| --------------- | --------------- | --------- | ----- | --------------------- |
-| background      | Basalt          | #242020   | - | - |
-| foreground      | Ivory           | #faebd7   | - | - |
-| blue (base)     | Pond            | #79b4da   | 65.44/0.08/237.83 | 5.14 |
-| blue (light)    | Lake            | #7aa8bf   | 70.69/0.06/230.29 | 6.28 |
-| red (base)      | Coral           | #ff4040   | 65.97/0.23/26.03  | 4.65 |
-| red (light)     | Terracotta      | #e2725b   | 67.74/0.14/32.94  | 5.21 |
-| green (base)    | Jade            | #00a86b   | 64.48/0.15/158.78 | 5.23 |
-| green (light)   | Shamrock        | #5fa778   | 66.81/0.10/154.08 | 5.59 |
-| yellow (base)   | Goldenrod       | #daa520   | 75.16/0.15/83.99  | 7.2 |
-| yellow (light)  | Triandra Grass  | #e2b13c   | 78.51/0.14/85.05  | 8.12 |
-| magenta (base)  | Lavender        | #b57edc   | 68.44/0.15/309.99 | 5.36 |
-| magenta (light) | Bright Lavender | #bf94e4   | 73.58/0.12/308.3  | 6.58 |
-| cyan (base)     | Sea Green       | #00a59d   | 65.08/0.11/188.7  | 5.27 |
-| cyan (light)    | Verdigris       | #43b3ae   | 70.25/0.1/190.95  | 6.37 |
+## Dark
+
+* Chroma = 0.1
+* Lightness = 65 (73 for light)
+
+| Purpose          | Color Name      | Hex Value | OKLCH | Contrast (background) |
+| ---------------- | --------------- | --------- | ----- | --------------------- |
+| background       | Basalt          | `#242020`   | - | - |
+| background (alt) | Jet             | `#343434`   | - | - |
+| foreground       | Ivory           | `#faebd7`   | - | - |
+| foreground (dim) | Almond (dim)    | `#e8d8c1`   | - | - |
+| blue (base)      | Pond            | `#4e98c5`   | 65/0.1/237.69 | 5.08 |
+| blue (light)     | Lake            | `#5fb3db`   | 73/0.1/230.94 | 6.87 |
+| red (base)       | Coral           | `#c57673`   | 65/0.1/22.51  | 4.77 |
+| red (light)      | Terracotta      | `#df907f`   | 73/0.1/32.77  | 6.47 |
+| green (base)     | Bamboo          | `#50a27c`   | 65/0.1/161.7  | 5.22 |
+| green (light)    | Shamrock        | `#74ba8b`   | 73/0.1/153.91 | 7.01 |
+| yellow (base)    | Sand            | `#a78c41`   | 65/0.1/89.59  | 4.96 |
+| yellow (light)   | Triandra Grass  | `#c4a35a`   | 73/0.1/85.55  | 6.7  |
+| magenta (base)   | Lavender        | `#a27ebd`   | 65/0.1/309.94 | 4.8  |
+| magenta (light)  | Bright Lavender | `#b997d9`   | 73/0.1/307.6  | 6.51 |
+| cyan (base)      | Sea Green       | `#31a39a`   | 65/0.1/187.33 | 5.24 |
+| cyan (light)     | Verdigris       | `#4ebcb7`   | 73/0.1/191.06 | 7.06 |
+| orange (base)    | Clay            | `#bf7e52`   | 65/0.1/54.12  | 4.85 |
+| orange (light)   | Fallen Leaves   | `#d09c5f`   | 73/0.1/69.6   | 6.6  |
+| -                | Sakura          | `#c57675`   | 65/0.1/20.92  | 4.77 |
+| -                | Lotus           | `#c1758b`   | 65/0.1/1.51   | 4.74 |
+| -                | Sunset          | `#c47865`   | 65/0.1/34.83  | 4.77 |
+| -                | Sunray          | `#919549`   | 65/0.1/111.56 | 5.06 |
+| -                | Old Wood        | `#c17b59`   | 65/0.1/46.38  | 4.79 |
+| -                | Red Wood        | `#c07c56`   | 65/0.1/49.51  | 4.8  |
+| -                | Cherry          | `#c57579`   | 65/0.1/17.0.1 | 4.75 |
+| -                | Jade            | `#54a279`   | 65/0.1/158.93 | 5.23 |
 
 ## Light
-Chroma = 0.1
-Lightness = 50 (60 for light)
 
-| Purpose         | Color Name      | Hex Value | OKLCH | Contrast (background) |
-| --------------- | --------------- | --------- | ----- | --------------------- |
-| background      | Ivory           | #faebd7   | - | - |
-| foreground      | Basalt           | #242020   | - | - |
-| blue (base)     | Pond | #1a6b95 | - | - |
+* Chroma = 0.1
+* Lightness = 50 (60 for light)
+
+| Purpose          | Color Name      | Hex Value | OKLCH | Contrast (background) |
+| ---------------- | --------------- | --------- | ----- | --------------------- |
+| background       | Basalt          | `#242020`   | - | - |
+| background (alt) | Jet             | `#343434`   | - | - |
+| foreground       | Ivory           | `#faebd7`   | - | - |
+| foreground (dim) | Almond (dim)    | `#e8d8c1`   | - | - |
+| blue (base)      | Pond            | `#4e98c5`   | | |
+| blue (light)     | Lake            | `#5fb3db`   | | |
+| red (base)       | Coral           | `#c57673`   | | |
+| red (light)      | Terracotta      | `#df907f`   | | |
+| green (base)     | Bamboo          | `#50a27c`   | | |
+| green (light)    | Shamrock        | `#74ba8b`   | | |
+| yellow (base)    | Sand            | `#a78c41`   | | |
+| yellow (light)   | Triandra Grass  | `#c4a35a`   | | |
+| magenta (base)   | Lavender        | `#a27ebd`   | | |
+| magenta (light)  | Bright Lavender | `#b997d9`   | | |
+| cyan (base)      | Sea Green       | `#31a39a`   | | |
+| cyan (light)     | Verdigris       | `#4ebcb7`   | | |
+| orange (base)    | Clay            | `#bf7e52`   | | |
+| orange (light)   | Fallen Leaves   | `#d09c5f`   | | |
+| -                | Sakura          | `#c57675`   | | |
+| -                | Lotus           | `#c1758b`   | | |
+| -                | Sunset          | `#c47865`   | | |
+| -                | Sunray          | `#919549`   | | |
+| -                | Old Wood        | `#c17b59`   | | |
+| -                | Red Wood        | `#c07c56`   | | |
+| -                | Cherry          | `#c57579`   | | |
+| -                | Jade            | `#54a279`   | | |
 
 
 # Design
-
-:warning: I am a software developer, not a designer, and it seriously
-shows in this color scheme :P
 
 My attempt was to create a colorscheme by following color theory (to the extent I understand it).
 
