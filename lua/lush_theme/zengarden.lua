@@ -175,7 +175,7 @@ if config == nil then
 end
 
 if variants[config.variant] == nil then
-  config.variant = "cyan"
+  config.variant = "yellow"
 end
 
 local variant = variants[config.variant]
@@ -251,7 +251,7 @@ local theme = lush(function(injected_functions)
     -- VisualNOS      { }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg     { fg = theme.error }, -- Warning messages
     -- Whitespace     { }, -- "nbsp", "space", "tab" and "trail" in "listchars"
-    Winseparator   { fg = colors.grey }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
+    Winseparator   { fg = colors.gravel }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
     -- WildMenu       { }, -- Current match in "wildmenu" completion
     WinBar         { fg = variant.fg, bg = theme.bg }, -- Window bar of current window
     WinBarNC       { fg = theme.comments, bg = theme.bg }, -- Window bar of not-current windows
