@@ -1,8 +1,9 @@
 local dark = {
   fg           = "#faebd7",
+  fg_dim       = "#71706e",
   bg           = "#242020",
   bg_dim       = "#252321",
-  bg_dim2      = "#353839",
+  bg_dim2      = "#2e2e2e",
   black        = "#242020",
   white        = "#faebd7",
   grey         = "#686b6c",
@@ -16,6 +17,7 @@ local dark = {
 
 local light = {
   fg           = "#242020",
+  fg_dim       = "#686b6c",
   bg           = "#faebd7",
   bg_dim       = "#dddddd",
   bg_dim2      = "#e8d8c1",
@@ -62,9 +64,9 @@ return {
     c = { bg = theme.bg_dim2, fg = theme.fg }
   },
   inactive = {
-    a = { bg = theme.bg_dim2, fg = theme.grey },
-    b = { bg = theme.blue, fg = theme.fg },
-    c = { bg = theme.cyan, fg = theme.fg }
+    a = { bg = theme.fg_dim, fg = fg },
+    b = { bg = theme.bg_dim2, fg = theme.fg_dim },
+    c = { bg = theme.bg_dim2, fg = theme.fg_dim }
   }
 }
 
