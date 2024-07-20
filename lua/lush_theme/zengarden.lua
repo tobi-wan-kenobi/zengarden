@@ -41,6 +41,7 @@ local colors = {
   basalt = hsl("#242020"),
   jet = hsl("#343434"),
   slate = hsl("#353839"),
+  silver = hsl("#71706e"),
   gravel = hsl("#686b6c"),
 
   onyx = hsl("#030106"),
@@ -49,6 +50,8 @@ local colors = {
   black_chestnut = hsl("#252321"),
   kurobeni = hsl("#23191e"),
   ivory_light = hsl("#fffaf2"),
+  almond = hsl("#efdecd"),
+  almond_dim = hsl("#e8d8c1"),
 
   dark = {
     pond = hsl("#4e98c5"),
@@ -107,9 +110,10 @@ local colors = {
 local themes = {
   dark = {
     fg = colors.ivory,
-    fg_dim = colors.stone,
+    fg_dim = colors.almond_dim,
     bg = colors.basalt,
     bg_alt = colors.jet,
+    bg_highlight = colors.silver,
     comments = colors.gravel,
     error = colors.dark.coral,
     info = colors.dark.pond,
@@ -121,7 +125,8 @@ local themes = {
     fg = colors.basalt,
     fg_dim = colors.slate,
     bg = colors.ivory,
-    bg_alt = colors.mist,
+    bg_alt = colors.almond_dim,
+    bg_highlight = colors.almond,
     comments = colors.gravel,
     error = colors.light.error,
     info = colors.light.pond,
@@ -182,7 +187,7 @@ local theme = lush(function(injected_functions)
     ColorColumn    { bg = theme.bg_alt }, -- Columns set with "colorcolumn"
     -- Conceal        { }, -- Placeholder characters substituted for concealed text (see "conceallevel")
     -- Cursor         { }, -- Character under the cursor
-    CurSearch      { gui = "bold,reverse" }, -- Highlighting a search pattern under the cursor (see "hlsearch")
+    CurSearch      { gui = "reverse,bold" }, -- Highlighting a search pattern under the cursor (see "hlsearch")
     -- lCursor        { }, -- Character under the cursor when |language-mapping| is used (see "guicursor")
     -- CursorIM       { }, -- Like Cursor, but used when in IME mode |CursorIM|
     CursorColumn   { bg = theme.bg_alt }, -- Screen-column at the cursor, when "cursorcolumn" is set.
@@ -200,8 +205,8 @@ local theme = lush(function(injected_functions)
     Folded         { bg = theme.bg_alt }, -- Line used for closed folds
     FoldColumn     { fg = color.lake }, -- "foldcolumn"
     SignColumn     { bg = theme.bg }, -- Column where |signs| are displayed
-    IncSearch      { bg = color.sand, fg = theme.bg }, -- "incsearch" highlighting; also used for the text replaced with ":s///c"
-    -- Substitute     { }, -- |:substitute| replacement text highlighting
+    IncSearch      { bg = color.sand, fg = theme.bg, gui="bold" }, -- "incsearch" highlighting; also used for the text replaced with ":s///c"
+    Substitute     { bg = color.sand, fg = theme.bg }, -- |:substitute| replacement text highlighting
     LineNr         { fg = theme.comments }, -- Line number for ":number" and ":#" commands, and when "number" or "relativenumber" option is set.
     LineNrAbove    { fg = color.terracotta }, -- Line number for when the "relativenumber" option is set, above the cursor line
     LineNrBelow    { fg = color.shamrock }, -- Line number for when the "relativenumber" option is set, below the cursor line
@@ -215,12 +220,12 @@ local theme = lush(function(injected_functions)
     -- MoreMsg        { }, -- |more-prompt|
     NonText        { fg = theme.comments }, -- "@" at the end of the window, characters from "showbreak" and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn"t fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal         { fg = theme.fg, bg = theme.bg }, -- Normal text
-    NormalFloat    { fg = theme.fg, bg = theme.bg_alt }, -- Normal text in floating windows.
+    NormalFloat    { fg = theme.fg, bg = theme.bg }, -- Normal text in floating windows.
     FloatBorder    { fg = theme.fg_dim, bg = theme.bg }, -- Border of floating windows.
     FloatTitle     { fg = variant.fg }, -- Title of floating windows.
     -- NormalNC       { }, -- normal text in non-current windows
     Pmenu          { fg = theme.fg, bg = theme.bg_alt }, -- Popup menu: Normal item.
-    PmenuSel       { fg = variant.fg, bg = theme.bg_alt }, -- Popup menu: Selected item.
+    PmenuSel       { fg = variant.fg, bg = theme.bg_highlight }, -- Popup menu: Selected item.
     -- PmenuKind      { }, -- Popup menu: Normal item "kind"
     PmenuKindSel   { fg = variant.fg, bg = theme.bg_alt }, -- Popup menu: Selected item "kind"
     -- PmenuExtra     { }, -- Popup menu: Normal item "extra text"
@@ -230,7 +235,7 @@ local theme = lush(function(injected_functions)
     Question       { fg = theme.fg, bg = theme.ok, gui = "bold" }, -- |hit-enter| prompt and yes/no questions
     -- QuickFixLine   { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     --Search       { bg = yellow.darken(25), fg = bg }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
-    Search       { fg = color.triandra_grass, bg = theme.bg_alt, gui = "underline,bold" }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
+    Search       { fg = color.sand, bg = theme.bg, gui = "reverse" }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
     SpecialKey     { fg = color.clay }, -- Unprintable characters: text displayed differently from what it really is. But not "listchars" whitespace. |hl-Whitespace|
     -- SpellBad       { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     -- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
