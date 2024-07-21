@@ -54,26 +54,9 @@ Currently, you can set the following parameters:
 * Chroma = 0.1
 * Lightness = 65 (73 for light)
 
-<table>
-    <tr>
-        <th>Purpose</th>
-        <th>Color Name</th>
-        <th>Hex Value</th>
-        <th>OKLCH</th>
-        <th>Contrast (vs. background)</th>
-    </tr>
-    <tr>
-        <td>background</td>
-        <td>Basalt</td>
-        <td style="background-color: #242020; color: #faebd7;">#242020</td>
-        <td>-</td>
-        <td>-</td>
-    </tr>
-</table>
-
-| Purpose          | Color Name      | Hex Value | OKLCH | Contrast (background) |
-| ---------------- | --------------- | --------- | ----- | --------------------- |
-| background       | Basalt          | ![#242020](https://placehold.co/15x15/242020/242020.png)`#242020`   | - | - |
+| Purpose          | Color Name      | Hex Value | Preview | OKLCH | Contrast (background) |
+| ---------------- | --------------- | --------- | ------- | ----- | --------------------- |
+| background       | Basalt          | #242020   | ![#242020](https://placehold.co/10x10/242020/242020.png) | - | - |
 | background (alt) | Jet             | `#343434`   | - | - |
 | background (hi)  | Silver          | `#71706e`   | - | - |
 | foreground       | Ivory           | `#faebd7`   | - | - |
