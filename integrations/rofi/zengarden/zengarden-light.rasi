@@ -1,0 +1,48 @@
+* {
+    highlight: bold italic;
+    scrollbar: true;
+
+	ivory: #faebd7;
+	basalt: #242020;
+	silver: #71706e;
+	stone: #b2a9ac;
+	almond: #e8d8c1;
+	rock: #2e2e2e;
+	gravel: #686b6c;
+	sand: #7a6006;
+	triandra: #9b7b31;
+	coral: #944a48;
+	terracotta: #b46959;
+
+    /* Theme colors */
+    background:                  @ivory;
+    background-color:            @background;
+    foreground:                  @basalt;
+    border-color:                @gravel;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @almond;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @stone;
+    selected-normal-foreground:  @basalt;
+
+    active-background:           @sand;
+    active-foreground:           @background;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @triandra;
+    selected-active-foreground:  @active-foreground;
+
+    urgent-background:           @coral;
+    urgent-foreground:           @background;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @terracotta;
+    selected-urgent-foreground:  @urgent-foreground;
+}
+
+@import "zengarden-common.rasi"
+
