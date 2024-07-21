@@ -1,89 +1,65 @@
 .theme-dark {
-	--text-normal: var(--white);
-	--text-muted: var(--white-faint);
-	--text-faint: var(--white-soft);
-	--background-primary: var(--black);
-	--background-primary-alt: var(--black-alt);
-	--background-secondary: var(--black);
-	--background-secondary-alt: var(--black-soft);
+	--pond: #4e98c5;
+	--lake: #5fb3db;
+	--coral: #c57673;
+	--terracotta: #df907f;
+	--bamboo: #50a27c;
+	--shamrock: #74ba8b;
+	--sand: #a78c41;
+	--grass: #c4a35a;
+	--lavender: #a27ebd;
+	--bright-lavender: #b997d9;
+	--sea_green: #31a39a;
+	--verdigris: #4ebcb7;
+	--clay: #bf7e52;
+	--leaves: #d09c5f;
 
-	--background-modifier-error: var(--red);
-	--background-modifier-success: var(--green);
-	--background-modifier-message: var(--blue);
+	--sakura: #c57675;
+	--lotus: #c1758b;
+	--sunset: #919549;
+	--oldwood: #c17b59;
+	--redwood: #c07c56;
+	--cherry: #c57579;
+	--jade: #54a279;
 
-	--text-success: var(--green1);
-	--text-warning: var(--orange1);
-	--text-error: var(--red1);
-
-	--header-color: var(--orange1);
-
-	--link-color: var(--cyan1);
-	--link-external-color: var(--cyan1);
-	--link-decoration: none;
-	--link-external-decoration: none;
-	--link-unresolved-color: var(--cyan1);
-	--link-color-hover: var(--cyan1);
-	--link-external-color-hover: var(--yellow1);
-	--text-selection: var(--grey);
-
-	--tag-color: var(--blue1);
-	--tag-background: var(--background-primary);
-	--tag-border-color: var(--blue1);
-	--tag-border-width: 1px;
-
-	--list-marker-color: var(--cyan1);
-	--list-marker-color-hover: var(--blue1);
-	--list-bullet-size: 6px;
-
-	--table-border-width: 1px;
-	--table-border-color: var(--cyan1);
-	--table-header-background: var(--cyan1);
-	--table-header-background-hover: var(--cyan);
-	--table-header-color: var(--white);
+	--text-normal: var(--ivory);
+	--text-muted: var(--almond_dim);
+	--text-faint: var(--candle);
+	--background-primary: var(--basalt);
+	--background-primary-alt: var(--jet);
+	--background-secondary: var(--rock);
+	--background-secondary-alt: var(--jet);
 }
 
 .theme-light {
-	--text-normal: var(--black-hard);
-	--text-muted: var(--black);
-	--text-faint: var(--black-soft);
-	--background-primary: var(--white);
-	--background-primary-alt: var(--white-soft);
-	--background-secondary: var(--white-hard);
-	--background-secondary-alt: var(--white);
+	--pond: #1a6b95;
+	--lake: #348bb1;
+	--coral: #944a48;
+	--terracotta: #b46959;
+	--bamboo: #1b7451;
+	--shamrock: #4c9165;
+	--sand: #7a6006;
+	--grass: #9b7b31;
+	--lavender: #75528e;
+	--bright-lavender: #9070af;
+	--clay: #8e5225;
+	--leaves: #a67537;
 
-	--background-modifier-error: var(--red1);
-	--background-modifier-success: var(--green1);
-	--background-modifier-message: var(--blue1);
+	--sakura: #944a4a;
+	--lotus: #90495f;
+	--sunset: #934c3b;
+	--oldwood: #914f2e;
+	--redwood: #90502a;
+	--cherry: #94494e;
+	--jade: #22744e;
 
-	--text-success: var(--green);
-	--text-warning: var(--orange);
-	--text-error: var(--red);
-
-	--header-color: var(--orange);
-
-	--link-color: var(--cyan);
-	--link-external-color: var(--cyan);
-	--link-decoration: none;
-	--link-external-decoration: none;
-	--link-unresolved-color: var(--cyan);
-	--link-color-hover: var(--cyan1);
-	--link-external-color-hover: var(--yellow);
-	--text-selection: var(--grey);
-
-	--tag-color: var(--blue);
-	--tag-background: var(--background-primary);
-	--tag-border-color: var(--blue);
-	--tag-border-width: 1px;
-
-	--list-marker-color: var(--cyan);
-	--list-marker-color-hover: var(--blue);
-	--list-bullet-size: 6px;
-
-	--table-border-width: 1px;
-	--table-border-color: var(--cyan);
-	--table-header-background: var(--cyan);
-	--table-header-background-hover: var(--cyan1);
-	--table-header-color: var(--white);
+	--text-normal: var(--onyx);
+	--text-muted: var(--basalt);
+	--text-faint: var(--kurobeni);
+	--background-primary: var(--ivory);
+	--background-primary-alt: var(--candle);
+	--background-secondary: var(--ivory_light);
+	--background-secondary-alt: var(--ivory);
 }
 
 .is-unresolved {
@@ -92,39 +68,19 @@
 
 :root {
 	/* color definitions */
-	--dark_grey: #2e2e2e;
-	--grey: #686b6c;
-	--white: #faebd7;
-	--white-soft: #d7d9c3;
-	--white-hard: #f8f7f2;
-	--white-muted: #e0d1be;
-	--white-faint: #c4b6a3;
-	--black: #252321;
-	--black-alt: #343434;
-	--black-soft: #23191e;
-	--black-hard: #030106;
-	--green: #196f18;
-	--red: #b62625;
-	--yellow: #94601e;
-	--blue: #1a5bc4;
-	--magenta: #9932cc;
-	--cyan: #007575;
-	--orange: #c04000;
+	--rock: #2e2e2e;
+	--gravel: #686b6c;
+	--ivory: #faebd7;
+	--candle: #d7d9c3;
+	--ivory_light: #fffaf2;
+	--almond: #efdecd;
+	--almond_dim: #e8d8c1;
+	--basalt: #242020;
+	--jet: #343434;
+	--kurobeni: #23191e;
+	--onyx: #030106;
+	--silver: #71706e;
 
-	--green1: #00a661;
-	--red1: #e36364;
-	--yellow1: #baaf43;
-	--blue1: #5e98bd;
-	--magenta1: #d952db;
-	--cyan1: #2fa39e;
-	--orange1: #ff8936;
-
-	--green2: #8abe80;
-	--red2: #db9ea5;
-	--yellow2: #b8935f;
-	--blue2: #7aa8bf;
-	--magenta2: #ebd2d8;
-	--orange2: #e3c28d;
 }
 
 body {
@@ -147,8 +103,46 @@ body {
    --input-hover-border-color: var(--red);
 
    --file-line-width: 90%;
-}
 
+	--background-modifier-error: var(--coral);
+	--background-modifier-success: var(--bamboo);
+	--background-modifier-message: var(--pond);
+
+	--text-success: var(--shamrock);
+	--text-warning: var(--leaves);
+	--text-error: var(--terracotta);
+
+	--header-color: var(--clay);
+
+	--link-color: var(--pond);
+	--link-external-color: var(--sea_green);
+	--link-decoration: none;
+	--link-external-decoration: none;
+	--link-unresolved-color: var(--sea_green);
+	--link-color-hover: var(--lake);
+	--link-external-color-hover: var(--grass);
+	--text-selection: var(--gravel);
+
+	--tag-color: var(--pond);
+	--tag-background: var(--background-primary);
+	--tag-border-color: var(--pond);
+	--tag-border-width: 1px;
+
+	--list-marker-color: var(--sand);
+	--list-marker-color-hover: var(--grass);
+	--list-bullet-size: 6px;
+
+	--checkbox-color: var(--gravel);
+	--checkbox-color-hover: var(--grass);
+	--checklist-done-color: var(--gravel);
+	--checklist-done-decoration: underscore;
+
+	--table-border-width: 1px;
+	--table-border-color: var(--sand);
+	--table-header-background: var(--sand);
+	--table-header-background-hover: var(--sand);
+	--table-header-color: var(--ivory);
+}
 
 .workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
 	display: none;
