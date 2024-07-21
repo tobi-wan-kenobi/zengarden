@@ -56,7 +56,7 @@ Currently, you can set the following parameters:
 
 | Purpose          | Color Name      | Hex Value | OKLCH | Contrast (background) |
 | ---------------- | --------------- | --------- | ----- | --------------------- |
-| background       | Basalt          | `#242020`   | - | - |
+| background       | Basalt          | ![#242020](https://placehold.co/15x15/242020/242020.png)`#242020`   | - | - |
 | background (alt) | Jet             | `#343434`   | - | - |
 | background (hi)  | Silver          | `#71706e`   | - | - |
 | foreground       | Ivory           | `#faebd7`   | - | - |
@@ -96,7 +96,7 @@ Currently, you can set the following parameters:
 | background (hi)  | Almond          | `#efdecd`   | - | - |
 | foreground       | Basalt          | `#242020`   | - | - |
 | foreground (dim) | Slate           | `#353839`   | - | - |
-| blue (base)      | Pond            | $\color{#1a6b95}{1a6b95}$ | 50/0.1/237.14 | 5 |
+| blue (base)      | Pond            | `#1a6b95`   | 50/0.1/237.14 | 5 |
 | blue (light)     | Lake            | `#348bb1`   | 60/0.1/230.66 | 3.27 |
 | red (base)       | Coral           | `#944a48`   | 50/0.1/22.9   | 5.38 |
 | red (light)      | Terracotta      | `#b46959`   | 60/0.1/32.93  | 3.51 |
