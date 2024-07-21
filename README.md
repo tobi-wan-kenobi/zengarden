@@ -58,6 +58,7 @@ Currently, you can set the following parameters:
 | ---------------- | --------------- | --------- | ----- | --------------------- |
 | background       | Basalt          | `#242020`   | - | - |
 | background (alt) | Jet             | `#343434`   | - | - |
+| background (hi)  | Silver          | `#71706e`   | - | - |
 | foreground       | Ivory           | `#faebd7`   | - | - |
 | foreground (dim) | Almond (dim)    | `#e8d8c1`   | - | - |
 | blue (base)      | Pond            | `#4e98c5`   | 65/0.1/237.69 | 5.08 |
@@ -90,32 +91,33 @@ Currently, you can set the following parameters:
 
 | Purpose          | Color Name      | Hex Value | OKLCH | Contrast (background) |
 | ---------------- | --------------- | --------- | ----- | --------------------- |
-| background       | Basalt          | `#242020`   | - | - |
-| background (alt) | Jet             | `#343434`   | - | - |
-| foreground       | Ivory           | `#faebd7`   | - | - |
-| foreground (dim) | Almond (dim)    | `#e8d8c1`   | - | - |
-| blue (base)      | Pond            | $\colorbox{#242020}{{\color{#4e98c5}{#4e98c5}}}$ | | |
-| blue (light)     | Lake            | `#5fb3db`   | | |
-| red (base)       | Coral           | `#c57673`   | | |
-| red (light)      | Terracotta      | `#df907f`   | | |
-| green (base)     | Bamboo          | `#50a27c`   | | |
-| green (light)    | Shamrock        | `#74ba8b`   | | |
-| yellow (base)    | Sand            | `#a78c41`   | | |
-| yellow (light)   | Triandra Grass  | `#c4a35a`   | | |
-| magenta (base)   | Lavender        | `#a27ebd`   | | |
-| magenta (light)  | Bright Lavender | `#b997d9`   | | |
-| cyan (base)      | Sea Green       | `#31a39a`   | | |
-| cyan (light)     | Verdigris       | `#4ebcb7`   | | |
-| orange (base)    | Clay            | `#bf7e52`   | | |
-| orange (light)   | Fallen Leaves   | `#d09c5f`   | | |
-| -                | Sakura          | `#c57675`   | | |
-| -                | Lotus           | `#c1758b`   | | |
-| -                | Sunset          | `#c47865`   | | |
-| -                | Sunray          | `#919549`   | | |
-| -                | Old Wood        | `#c17b59`   | | |
-| -                | Red Wood        | `#c07c56`   | | |
-| -                | Cherry          | `#c57579`   | | |
-| -                | Jade            | `#54a279`   | | |
+| background       | Ivory           | `#faebd7`   | - | - |
+| background (alt) | Almond (dim)    | `#e8d8c1`   | - | - |
+| background (hi)  | Almond          | `#efdecd`   | - | - |
+| foreground       | Basalt          | `#242020`   | - | - |
+| foreground (dim) | Slate           | `#353839`   | - | - |
+| blue (base)      | Pond            | $\color{#1a6b95}{#1a6b95}$ | 50/0.1/237.14 | 5 |
+| blue (light)     | Lake            | `#348bb1`   | 60/0.1/230.66 | 3.27 |
+| red (base)       | Coral           | `#944a48`   | 50/0.1/22.9   | 5.38 |
+| red (light)      | Terracotta      | `#b46959`   | 60/0.1/32.93  | 3.51 |
+| green (base)     | Bamboo          | `#1b7451`   | 50/0.1/161.9  | 4.89 |
+| green (light)    | Shamrock        | `#4c9165`   | 60/0.1/154.23 | 3.23 |
+| yellow (base)    | Sand            | `#7a6006`   | 50/0.1/89.71  | 5.11 |
+| yellow (light)   | Triandra Grass  | `#9b7b31`   | 60/0.1/85.28  | 3.4 |
+| magenta (base)   | Lavender        | `#75528e`   | 50/0.1/310.02 | 5.34 |
+| magenta (light)  | Bright Lavender | `#9070af`   | 60/0.1/60.07  | 3.5 |
+| cyan (base)      | Sea Green       | `#00726f`   | 50/0.1/0.08   | 4.93 |
+| cyan (light)     | Verdigris       | `#13938f`   | 60/0.1/191.34 | 3.2 |
+| orange (base)    | Clay            | `#8e5225`   | 50/0.1/54.71  | 5.29 |
+| orange (light)   | Fallen Leaves   | `#a67537`   | 60/0.1/70.19  | 3.43 |
+| -                | Sakura          | `#944a4a`   | 50/0.1/21.27  | 5.37 |
+| -                | Lotus           | `#90495f`   | 50/0.1/1.58   | 5.42 |
+| -                | Sunset          | `#934c3b`   | 50/0.1/34.55  | 5.37 |
+| -                | Sunray          | `#656817`   | 50/0.1/111.67 | 5.05 |
+| -                | Old Wood        | `#914f2e`   | 50/0.1/46.07  | 5.33 |
+| -                | Red Wood        | `#90502a`   | 50/0.1/49.53  | 5.32 |
+| -                | Cherry          | `#94494e`   | 50/0.1/17.25  | 5.39 |
+| -                | Jade            | `#22744e`   | 50/0.1/159.02 | 4.87 |
 
 
 # Design
