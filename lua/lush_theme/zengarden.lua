@@ -414,7 +414,7 @@ local theme = lush(function(injected_functions)
     sym"@keyword.modifier" { StorageClass },
     sym"@keyword.return" { fg = color.terracotta },
     sym"@keyword.gitcommit" { fg = color.bamboo },
-    sym"@lsp.type.namespace" { fg = color.bamboo },
+    sym"@lsp.type.namespace" { fg = color.lavender },
     sym"@lsp.mod.attribute" { fg = theme.comments },
     sym"@lsp.type" { Type },
     sym"@operator" { fg = color.clay },
@@ -432,7 +432,7 @@ local theme = lush(function(injected_functions)
     -- sym"@type.definition"   { }, -- Typedef
     -- sym"@storageclass"      { }, -- StorageClass
     -- sym"@structure"         { }, -- Structure
-    sym"@namespace"         { fg = color.bamboo }, -- Identifier
+    sym"@namespace"         { fg = color.lavender }, -- Identifier
     sym"@include"           { Include }, -- Include
     sym"@preproc"           { PreProc }, -- PreProc
     sym"@comment.gitcommit" { Comment },
