@@ -415,6 +415,7 @@ local theme = lush(function(injected_functions)
     sym"@keyword.return" { fg = color.terracotta },
     sym"@keyword.gitcommit" { fg = color.bamboo },
     sym"@lsp.type.namespace" { fg = color.pond },
+    sym"@lsp.type.macro.rust" { Function },
     sym"@lsp.mod.attribute" { fg = theme.comments },
     sym"@lsp.type" { Type },
     sym"@lsp.type.struct" { fg = color.lavender },
