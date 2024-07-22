@@ -421,7 +421,9 @@ local theme = lush(function(injected_functions)
     sym"@lsp.type.decorator" { Comment },
     sym"@lsp.type.character" { Character },
     sym"@lsp.typemod.character" { Character },
+    sym"@lsp.type.string" { String },
     sym"@lsp.typemod.string" { String },
+    sym"@lsp.type.number" { Number },
     sym"@lsp.typemod.number" { Number },
     sym"@string.special.path.gitcommit" { fg = theme.fg_dim },
     -- sym"@exception"         { }, -- Exception
