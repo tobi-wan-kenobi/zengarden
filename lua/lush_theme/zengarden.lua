@@ -226,7 +226,7 @@ local theme = lush(function(injected_functions)
     -- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of "display"
     -- MoreMsg        { }, -- |more-prompt|
     NonText        { fg = theme.comments }, -- "@" at the end of the window, characters from "showbreak" and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn"t fit at the end of the line). See also |hl-EndOfBuffer|.
-    Normal         { fg = theme.fg, bg = theme.bg }, -- Normal text
+    Normal         { fg = theme.fg_dim, bg = theme.bg }, -- Normal text
     NormalFloat    { fg = theme.fg, bg = theme.bg }, -- Normal text in floating windows.
     FloatBorder    { fg = theme.fg_dim, bg = theme.bg }, -- Border of floating windows.
     FloatTitle     { fg = variant.fg }, -- Title of floating windows.
