@@ -25,14 +25,6 @@ local lush = require("lush")
 local hsl = lush.hsl
 local config = require("zengarden").config
 
-local function shade(color, value)
-  if vim.o.background == "light" then
-    return color.darken(value)
-  else
-    return color.lighten(value)
-  end
-end
-
 local colors = {
   -- blacks, whites, greys
   ivory = hsl("#faebd7"),
