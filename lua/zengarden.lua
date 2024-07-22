@@ -37,6 +37,8 @@ function module.load()
         sym("@comment.gitcommit") { theme["@comment.gitcommit"], gui = "italic" },
         sym("@keyword.gitcommit") { theme["@keyword.gitcommit"], gui = "italic" },
         sym("@lsp.type.namespace") { theme["@lsp.type.namespace"], gui = "italic" },
+        sym("@lsp.type.struct") { theme["@lsp.type.struct"], gui = "italic" },
+        sym("@lsp.type.class") { theme["@lsp.type.class"], gui = "italic" },
       }
     end)
   end
