@@ -39,6 +39,7 @@ function module.load()
         sym("@lsp.type.namespace") { theme["@lsp.type.namespace"], gui = "italic" },
         sym("@lsp.type.struct") { theme["@lsp.type.struct"], gui = "italic" },
         sym("@lsp.type.class") { theme["@lsp.type.class"], gui = "italic" },
+        sym("@lsp.type.macro.rust") { theme["@lsp.type.macro.rust"], gui = "italic" },
       }
     end)
   end
