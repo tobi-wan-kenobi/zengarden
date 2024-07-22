@@ -31,6 +31,7 @@ function module.load()
         DiagnosticOk { theme.DiagnosticOk, gui = "italic" },
         Special { theme.Special, gui = "italic" },
         Type { theme.Type, gui = "italic" },
+        rustAttribute { theme.rustAttribute, gui = "italic" },
         --Identifier { theme.Identifier, gui = "italic" },
         sym("@namespace") { theme["@namespace"], gui = "italic" },
         sym("@comment.gitcommit") { theme["@comment.gitcommit"], gui = "italic" },

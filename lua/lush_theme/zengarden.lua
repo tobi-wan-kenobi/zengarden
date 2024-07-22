@@ -317,6 +317,8 @@ local theme = lush(function(injected_functions)
     -- other LSP clients may use these groups, or use their own. Consult your
     -- LSP client"s documentation.
 
+    rustAttribute { fg = color.bamboo },
+
     -- See :h lsp-highlight, some groups may not be listed, submit a PR fix to lush-template!
     --
     -- LspReferenceText            { } , -- Used for highlighting "text" references
@@ -410,8 +412,9 @@ local theme = lush(function(injected_functions)
     sym"@keyword.modifier" { StorageClass },
     sym"@keyword.return" { fg = color.terracotta },
     sym"@keyword.gitcommit" { fg = color.bamboo },
-    sym"@lsp.type.namespace" { fg = color.sand },
+    sym"@lsp.type.namespace" { fg = color.bamboo },
     sym"@operator" { fg = color.clay },
+    sym"@lsp.type.decorator" { Comment },
     sym"@string.special.path.gitcommit" { fg = theme.fg_dim },
     -- sym"@exception"         { }, -- Exception
     sym"@variable"          { fg = theme.fg_dim }, -- Identifier
@@ -419,9 +422,9 @@ local theme = lush(function(injected_functions)
     -- sym"@type.definition"   { }, -- Typedef
     -- sym"@storageclass"      { }, -- StorageClass
     -- sym"@structure"         { }, -- Structure
-    sym"@namespace"         { fg = color.lake }, -- Identifier
+    sym"@namespace"         { fg = color.pond }, -- Identifier
     sym"@include"           { fg = color.pond }, -- Include
-    sym"@preproc"           { fg = color.pond }, -- PreProc
+    sym"@preproc"           { fg = color.oldwood }, -- PreProc
     sym"@comment.gitcommit" { Comment },
     -- sym"@debug"             { }, -- Debug
     -- sym"@tag"               { }, -- Tag
