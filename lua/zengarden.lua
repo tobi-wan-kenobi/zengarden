@@ -33,6 +33,8 @@ function module.load()
         Type { theme.Type, gui = "italic" },
         --Identifier { theme.Identifier, gui = "italic" },
         sym("@namespace") { theme["@namespace"], gui = "italic" },
+        sym("@comment.gitcommit") { theme["@comment.gitcommit"], gui = "italic" },
+        sym("@keyword.gitcommit") { theme["@keyword.gitcommit"], gui = "italic" },
         sym("@lsp.type.namespace") { theme["@lsp.type.namespace"], gui = "italic" },
       }
     end)

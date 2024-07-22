@@ -66,7 +66,7 @@ local colors = {
     triandra_grass = hsl("#c4a35a"),
     lavender = hsl("#a27ebd"),
     bright_lavender = hsl("#b997d9"),
-    sea_green = hsl("#31a39a"),
+    sea_green = hsl("#39a391"),
     verdigris = hsl("#4ebcb7"),
     clay = hsl("#bf7e52"),
     fallen_leaves = hsl("#d09c5f"),
@@ -78,7 +78,8 @@ local colors = {
     sunray = hsl("#919549"),
     oldwood = hsl("#c17b59"),
     redwood = hsl("#c07c56"),
-    cherry = hsl("#c57579"),
+    cherry = hsl("#d96488"),
+    cherry_light = hsl("#f37c9f"),
     jade = hsl("#54a279"),
   },
   light = {
@@ -104,7 +105,8 @@ local colors = {
     sunray = hsl("#656817"),
     oldwood = hsl("#914f2e"),
     redwood = hsl("#90502a"),
-    cherry = hsl("#94494e"),
+    cherry = hsl("#c65378"),
+    cherry_light = hsl("#d76386"),
     jade = hsl("#22744e"),
   },
 }
@@ -201,12 +203,12 @@ local theme = lush(function(injected_functions)
     DiffAdd        { fg = color.bamboo }, -- Diff mode: Added line |diff.txt|
     DiffChange     { fg = color.pond }, -- Diff mode: Changed line |diff.txt|
     DiffDelete     { fg = color.coral }, -- Diff mode: Deleted line |diff.txt|
-    DiffText       { fg = color.sunray }, -- Diff mode: Changed text within a changed line |diff.txt|
+    DiffText       { fg = color.sand }, -- Diff mode: Changed text within a changed line |diff.txt|
     -- EndOfBuffer    { }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
     -- TermCursor     { }, -- Cursor in a focused terminal
     -- TermCursorNC   { }, -- Cursor in an unfocused terminal
     ErrorMsg       { bg = theme.error, fg = theme.bg }, -- Error messages on the command line
-    VertSplit      { fg = theme.fg_dim }, -- Column separating vertically split windows
+    VertSplit      { fg = theme.fg }, -- Column separating vertically split windows
     Folded         { bg = theme.bg_alt }, -- Line used for closed folds
     FoldColumn     { fg = color.lake }, -- "foldcolumn"
     SignColumn     { bg = theme.bg }, -- Column where |signs| are displayed
@@ -215,11 +217,11 @@ local theme = lush(function(injected_functions)
     LineNr         { fg = theme.comments }, -- Line number for ":number" and ":#" commands, and when "number" or "relativenumber" option is set.
     LineNrAbove    { fg = color.terracotta }, -- Line number for when the "relativenumber" option is set, above the cursor line
     LineNrBelow    { fg = color.shamrock }, -- Line number for when the "relativenumber" option is set, below the cursor line
-    CursorLineNr   { fg = theme.fg_dim, bg = theme.bg_alt }, -- Like LineNr when "cursorline" or "relativenumber" is set for the cursor line.
+    CursorLineNr   { fg = theme.fg, bg = theme.bg_alt }, -- Like LineNr when "cursorline" or "relativenumber" is set for the cursor line.
     -- CursorLineFold { }, -- Like FoldColumn when "cursorline" is set for the cursor line
     -- CursorLineSign { }, -- Like SignColumn when "cursorline" is set for the cursor line
     MatchParen     { fg = variant.bg }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-    -- ModeMsg        { }, -- "showmode" message (e.g., "-- INSERT -- ")
+    ModeMsg        { fg = theme.fg_dim }, -- "showmode" message (e.g., "-- INSERT -- ")
     MsgArea        { bg = theme.bg, fg = theme.fg_dim }, -- Area for messages and cmdline
     -- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of "display"
     -- MoreMsg        { }, -- |more-prompt|
@@ -238,7 +240,7 @@ local theme = lush(function(injected_functions)
     PmenuSbar      { bg = colors.gravel }, -- Popup menu: Scrollbar.
     PmenuThumb     { bg = variant.fg }, -- Popup menu: Thumb of the scrollbar.
     Question       { fg = theme.fg, bg = theme.ok, gui = "bold" }, -- |hit-enter| prompt and yes/no questions
-    -- QuickFixLine   { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+    QuickFixLine   { fg = theme.fg_dim }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     --Search       { bg = yellow.darken(25), fg = bg }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
     Search       { fg = color.sand, bg = theme.bg, gui = "reverse" }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
     SpecialKey     { fg = color.coral }, -- Unprintable characters: text displayed differently from what it really is. But not "listchars" whitespace. |hl-Whitespace|
@@ -272,14 +274,14 @@ local theme = lush(function(injected_functions)
     Comment        { fg = theme.comments }, -- Any comment
 
     Constant       { fg = color.clay }, -- (*) Any constant
-    String         { fg = color.bamboo }, --   A string constant: "this is a string"
-    Character      { fg = color.clay }, --   A character constant: "c", "\n"
+    String         { fg = color.sea_green }, --   A string constant: "this is a string"
+    Character      { fg = color.bamboo}, --   A character constant: "c", "\n"
     Number         { fg = color.lavender }, --   A number constant: 234, 0xff
     Float          { fg = color.lavender }, --   A floating point constant: 2.3e10
     Boolean        { fg = color.fallen_leaves }, --   A boolean constant: TRUE, false
 
     Identifier     { fg = theme.fg_dim }, -- (*) Any variable name
-    Function       { fg = color.pond }, --   Function name (also: methods for classes)
+    Function       { fg = color.bamboo }, --   Function name (also: methods for classes)
 
     Statement      { fg = color.lotus }, -- (*) Any statement
     -- Conditional    { }, --   if, then, else, endif, switch, etc.
@@ -287,7 +289,7 @@ local theme = lush(function(injected_functions)
     -- Label          { }, --   case, default, etc.
     -- Operator       { }, --   "sizeof", "+", "*", etc.
     Keyword        { fg = color.sand }, --   any other keyword
-    Exception      { fg = color.cherry }, --   try, catch, throw
+    Exception      { fg = color.cherry_light }, --   try, catch, throw
 
     PreProc        { fg = color.pond }, -- (*) Generic Preprocessor
     -- Include        { }, --   Preprocessor #include
@@ -301,7 +303,7 @@ local theme = lush(function(injected_functions)
     -- Typedef        { }, --   A typedef
 
     Special        { fg = color.sand }, -- (*) Any special symbol
-    SpecialChar    { fg = shade(color.lotus, 25) }, --   Special character in a constant
+    SpecialChar    { fg = color.cherry }, --   Special character in a constant
     -- Tag            { }, --   You can use CTRL-] on this
     Delimiter      { fg = theme.fg_dim }, --   Character that needs attention
     -- SpecialComment { }, --   Special things inside a comment (e.g. "\n")
@@ -406,8 +408,10 @@ local theme = lush(function(injected_functions)
     sym"@keyword.import"    { fg = color.pond },
     sym"@keyword.exception" { fg = color.coral },
     sym"@keyword.modifier" { StorageClass },
+    sym"@keyword.gitcommit" { fg = color.bamboo },
     sym"@lsp.type.namespace" { fg = color.sand },
     sym"@operator" { fg = color.clay },
+    sym"@string.special.path.gitcommit" { fg = theme.fg_dim },
     -- sym"@exception"         { }, -- Exception
     sym"@variable"          { fg = theme.fg_dim }, -- Identifier
     -- sym"@type"              { }, -- Type
@@ -417,6 +421,7 @@ local theme = lush(function(injected_functions)
     sym"@namespace"         { fg = color.lake }, -- Identifier
     sym"@include"           { fg = color.pond }, -- Include
     sym"@preproc"           { fg = color.pond }, -- PreProc
+    sym"@comment.gitcommit" { Comment },
     -- sym"@debug"             { }, -- Debug
     -- sym"@tag"               { }, -- Tag
 }

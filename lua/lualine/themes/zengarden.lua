@@ -12,7 +12,7 @@ local dark = {
   blue         = "#4e98c5",
   magenta      = "#a27ebd",
   orange       = "#bf7e52",
-  cyan         = "#31a39a",
+  cyan         = "#39a391",
 }
 
 local light = {
