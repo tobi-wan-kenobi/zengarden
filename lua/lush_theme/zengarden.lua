@@ -291,10 +291,10 @@ local theme = lush(function(injected_functions)
     Keyword        { fg = color.sand }, --   any other keyword
     Exception      { fg = color.cherry_light }, --   try, catch, throw
 
-    PreProc        { fg = color.pond }, -- (*) Generic Preprocessor
-    -- Include        { }, --   Preprocessor #include
-    -- Define         { }, --   Preprocessor #define
-    -- Macro          { }, --   Same as Define
+    PreProc        { Comment }, -- (*) Generic Preprocessor
+    Include        { fg = color.pond }, --   Preprocessor #include
+    Define         { fg = color.clay }, --   Preprocessor #define
+    Macro          { fg = color.bamboo }, --   Same as Define
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
     Type           { fg = color.sand }, -- (*) int, long, char, etc.
@@ -354,6 +354,9 @@ local theme = lush(function(injected_functions)
     -- DiagnosticSignHint         { } , -- Used for "Hint" signs in sign column.
     -- DiagnosticSignOk           { } , -- Used for "Ok" signs in sign column.
 
+
+    rustAttribute { Keyword },
+    rustFoldBraces { Delimiter },
     -- Tree-Sitter syntax groups.
     --
     -- See :h treesitter-highlight-groups, some groups may not be listed,
@@ -411,9 +414,11 @@ local theme = lush(function(injected_functions)
     sym"@keyword.return" { fg = color.terracotta },
     sym"@keyword.gitcommit" { fg = color.bamboo },
     sym"@lsp.type.namespace" { fg = color.bamboo },
+    sym"@lsp.mod.attribute" { fg = theme.comments },
     sym"@lsp.type" { Type },
     sym"@operator" { fg = color.clay },
     sym"@lsp.type.decorator" { Comment },
+    sym"@lsp.type.character" { Character },
     sym"@string.special.path.gitcommit" { fg = theme.fg_dim },
     -- sym"@exception"         { }, -- Exception
     sym"@variable"          { fg = theme.fg_dim }, -- Identifier
@@ -422,8 +427,8 @@ local theme = lush(function(injected_functions)
     -- sym"@storageclass"      { }, -- StorageClass
     -- sym"@structure"         { }, -- Structure
     sym"@namespace"         { fg = color.bamboo }, -- Identifier
-    sym"@include"           { fg = color.pond }, -- Include
-    sym"@preproc"           { fg = color.oldwood }, -- PreProc
+    sym"@include"           { Include }, -- Include
+    sym"@preproc"           { PreProc }, -- PreProc
     sym"@comment.gitcommit" { Comment },
     -- sym"@debug"             { }, -- Debug
     -- sym"@tag"               { }, -- Tag
