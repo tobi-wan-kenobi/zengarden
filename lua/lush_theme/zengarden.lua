@@ -236,7 +236,7 @@ local theme = lush(function(injected_functions)
     -- QuickFixLine   { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     --Search       { bg = yellow.darken(25), fg = bg }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
     Search       { fg = color.sand, bg = theme.bg, gui = "reverse" }, -- Last search pattern highlighting (see "hlsearch"). Also used for similar items that need to stand out.
-    SpecialKey     { fg = color.clay }, -- Unprintable characters: text displayed differently from what it really is. But not "listchars" whitespace. |hl-Whitespace|
+    SpecialKey     { fg = color.coral }, -- Unprintable characters: text displayed differently from what it really is. But not "listchars" whitespace. |hl-Whitespace|
     -- SpellBad       { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     -- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     -- SpellLocal     { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
@@ -268,21 +268,21 @@ local theme = lush(function(injected_functions)
 
     Constant       { fg = color.clay }, -- (*) Any constant
     String         { fg = color.bamboo }, --   A string constant: "this is a string"
-    Character      { fg = color.lavender }, --   A character constant: "c", "\n"
-    Number         { fg = color.sand }, --   A number constant: 234, 0xff
-    Boolean        { fg = color.lake }, --   A boolean constant: TRUE, false
-    Float          { fg = color.triandra_grass }, --   A floating point constant: 2.3e10
+    Character      { fg = color.clay }, --   A character constant: "c", "\n"
+    Number         { fg = color.lavender }, --   A number constant: 234, 0xff
+    Float          { fg = color.lavender }, --   A floating point constant: 2.3e10
+    Boolean        { fg = color.fallen_leaves }, --   A boolean constant: TRUE, false
 
-    Identifier     { fg = color.sunray }, -- (*) Any variable name
-    Function       { fg = color.sea_green }, --   Function name (also: methods for classes)
+    Identifier     { fg = theme.fg }, -- (*) Any variable name
+    Function       { fg = color.pond }, --   Function name (also: methods for classes)
 
-    Statement      { fg = color.jade }, -- (*) Any statement
+    Statement      { fg = color.lotus }, -- (*) Any statement
     -- Conditional    { }, --   if, then, else, endif, switch, etc.
     -- Repeat         { }, --   for, do, while, etc.
     -- Label          { }, --   case, default, etc.
     -- Operator       { }, --   "sizeof", "+", "*", etc.
     Keyword        { fg = color.sand }, --   any other keyword
-    Exception      { fg = color.lotus }, --   try, catch, throw
+    Exception      { fg = color.cherry }, --   try, catch, throw
 
     PreProc        { fg = color.pond }, -- (*) Generic Preprocessor
     -- Include        { }, --   Preprocessor #include
@@ -290,13 +290,13 @@ local theme = lush(function(injected_functions)
     -- Macro          { }, --   Same as Define
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-    Type           { fg = color.triandra_grass }, -- (*) int, long, char, etc.
+    Type           { fg = color.clay }, -- (*) int, long, char, etc.
     StorageClass   { fg = color.triandra_grass }, --   static, register, volatile, etc.
     -- Structure      { }, --   struct, union, enum, etc.
     -- Typedef        { }, --   A typedef
 
-    Special        { fg = color.clay }, -- (*) Any special symbol
-    SpecialChar    { fg = shade(color.clay, 25) }, --   Special character in a constant
+    Special        { fg = color.lotus }, -- (*) Any special symbol
+    SpecialChar    { fg = shade(color.lotus, 25) }, --   Special character in a constant
     -- Tag            { }, --   You can use CTRL-] on this
     -- Delimiter      { }, --   Character that needs attention
     -- SpecialComment { }, --   Special things inside a comment (e.g. "\n")
