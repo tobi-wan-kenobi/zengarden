@@ -406,8 +406,9 @@ local theme = lush(function(injected_functions)
     -- sym"@operator"          { }, -- Operator
     sym"@keyword"           { fg = color.coral }, -- Keyword
     sym"@keyword.import"    { fg = color.pond },
-    sym"@keyword.exception" { fg = color.coral },
+    sym"@keyword.exception" { fg = color.terracotta },
     sym"@keyword.modifier" { StorageClass },
+    sym"@keyword.return" { fg = color.terracotta },
     sym"@keyword.gitcommit" { fg = color.bamboo },
     sym"@lsp.type.namespace" { fg = color.sand },
     sym"@operator" { fg = color.clay },
