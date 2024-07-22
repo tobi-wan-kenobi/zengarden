@@ -1,10 +1,10 @@
 local dark = {
   fg           = "#faebd7",
   fg_dim       = "#71706e",
-  bg           = "#242020",
+  bg           = "#202020",
   bg_dim       = "#252321",
   bg_dim2      = "#2e2e2e",
-  black        = "#242020",
+  black        = "#202020",
   white        = "#faebd7",
   grey         = "#686b6c",
   bg_active    = "#b2a9ac",
@@ -16,13 +16,13 @@ local dark = {
 }
 
 local light = {
-  fg           = "#242020",
+  fg           = "#202020",
   fg_dim       = "#686b6c",
   bg           = "#faebd7",
   bg_dim       = "#dddddd",
   bg_dim2      = "#e8d8c1",
   bg_active    = "#353839",
-  black        = "#242020",
+  black        = "#202020",
   white        = "#faebd7",
   red          = "#944a48",
   blue         = "#1a6b95",

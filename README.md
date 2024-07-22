@@ -56,7 +56,7 @@ Currently, you can set the following parameters:
 
 | Purpose          | Color Name      | Hex Value | Preview | OKLCH | Contrast (background) |
 | ---------------- | --------------- | --------- | ------- | ----- | --------------------- |
-| background       | Basalt          | `#242020` | ![#242020](https://placehold.co/10x10/242020/242020.png) | - | - |
+| background       | Basalt          | `#202020` | ![#202020](https://placehold.co/10x10/202020/202020.png) | - | - |
 | background (alt) | Jet             | `#343434` | ![#343434](https://placehold.co/10x10/343434/343434.png) | - | - |
 | background (hi)  | Silver          | `#71706e` | ![#71706e](https://placehold.co/10x10/71706e/71706e.png) | - | - |
 | foreground       | Ivory           | `#faebd7` | ![#faebd7](https://placehold.co/10x10/faebd7/faebd7.png) | - | - |
@@ -94,7 +94,7 @@ Currently, you can set the following parameters:
 | background       | Ivory           | `#faebd7` | ![#faebd7](https://placehold.co/10x10/faebd7/faebd7.png) | - | - |
 | background (alt) | Almond (dim)    | `#e8d8c1` | ![#e8d8c1](https://placehold.co/10x10/e8d8c1/e8d8c1.png) | - | - |
 | background (hi)  | Almond          | `#efdecd` | ![#efdecd](https://placehold.co/10x10/efdecd/efdecd.png) | - | - |
-| foreground       | Basalt          | `#242020` | ![#242020](https://placehold.co/10x10/242020/242020.png) | - | - |
+| foreground       | Basalt          | `#202020` | ![#202020](https://placehold.co/10x10/202020/202020.png) | - | - |
 | foreground (dim) | Slate           | `#353839` | ![#353839](https://placehold.co/10x10/353839/353839.png) | - | - |
 | blue (base)      | Pond            | `#1a6b95` | ![#1a6b95](https://placehold.co/10x10/1a6b95/1a6b95.png) | 50/0.1/237.14 | 5 |
 | blue (light)     | Lake            | `#348bb1` | ![#348bb1](https://placehold.co/10x10/348bb1/348bb1.png) | 60/0.1/230.66 | 3.27 |
