@@ -52,6 +52,8 @@ local colors = {
   ivory_light = hsl("#fffaf2"),
   almond = hsl("#efdecd"),
   almond_dim = hsl("#e8d8c1"),
+  birch = hsl("#988e7a"),
+    --fg_dim = hsl("#c9bea9"),
 
   dark = {
     pond = hsl("#4e98c5"),
@@ -110,7 +112,10 @@ local colors = {
 local themes = {
   dark = {
     fg = colors.ivory,
-    fg_dim = colors.almond_dim,
+    --fg_dim = colors.almond_dim,
+    --fg_dim = hsl("#c9bea9"),
+    --fg_dim = hsl("#b1a692"),
+    fg_dim = colors.birch,
     bg = colors.basalt,
     bg_alt = colors.jet,
     bg_highlight = colors.silver,
@@ -273,7 +278,7 @@ local theme = lush(function(injected_functions)
     Float          { fg = color.lavender }, --   A floating point constant: 2.3e10
     Boolean        { fg = color.fallen_leaves }, --   A boolean constant: TRUE, false
 
-    Identifier     { fg = theme.fg }, -- (*) Any variable name
+    Identifier     { fg = theme.fg_dim }, -- (*) Any variable name
     Function       { fg = color.pond }, --   Function name (also: methods for classes)
 
     Statement      { fg = color.lotus }, -- (*) Any statement
@@ -290,15 +295,15 @@ local theme = lush(function(injected_functions)
     -- Macro          { }, --   Same as Define
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-    Type           { fg = color.clay }, -- (*) int, long, char, etc.
-    StorageClass   { fg = color.triandra_grass }, --   static, register, volatile, etc.
+    Type           { fg = color.sand }, -- (*) int, long, char, etc.
+    StorageClass   { fg = color.coral }, --   static, register, volatile, etc.
     -- Structure      { }, --   struct, union, enum, etc.
     -- Typedef        { }, --   A typedef
 
-    Special        { fg = color.lotus }, -- (*) Any special symbol
+    Special        { fg = color.sand }, -- (*) Any special symbol
     SpecialChar    { fg = shade(color.lotus, 25) }, --   Special character in a constant
     -- Tag            { }, --   You can use CTRL-] on this
-    -- Delimiter      { }, --   Character that needs attention
+    Delimiter      { fg = theme.fg_dim }, --   Character that needs attention
     -- SpecialComment { }, --   Special things inside a comment (e.g. "\n")
     -- Debug          { }, --   Debugging statements
 
@@ -397,11 +402,14 @@ local theme = lush(function(injected_functions)
     -- sym"@repeat"            { }, -- Repeat
     -- sym"@label"             { }, -- Label
     -- sym"@operator"          { }, -- Operator
-    sym"@keyword"           { fg = color.sand }, -- Keyword
+    sym"@keyword"           { fg = color.coral }, -- Keyword
     sym"@keyword.import"    { fg = color.pond },
-    sym"@lsp.type.namespace" { fg = color.pond },
+    sym"@keyword.exception" { fg = color.coral },
+    sym"@keyword.modifier" { StorageClass },
+    sym"@lsp.type.namespace" { fg = color.sand },
+    sym"@operator" { fg = color.clay },
     -- sym"@exception"         { }, -- Exception
-    sym"@variable"          { fg = theme.fg }, -- Identifier
+    sym"@variable"          { fg = theme.fg_dim }, -- Identifier
     -- sym"@type"              { }, -- Type
     -- sym"@type.definition"   { }, -- Typedef
     -- sym"@storageclass"      { }, -- StorageClass

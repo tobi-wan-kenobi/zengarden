@@ -29,6 +29,9 @@ function module.load()
         DiagnosticInfo { theme.DiagnosticInfo, gui = "italic" },
         DiagnosticWarn { theme.DiagnosticWarn, gui = "italic" },
         DiagnosticOk { theme.DiagnosticOk, gui = "italic" },
+        Special { theme.Special, gui = "italic" },
+        Type { theme.Type, gui = "italic" },
+        --Identifier { theme.Identifier, gui = "italic" },
         sym("@namespace") { theme["@namespace"], gui = "italic" },
         sym("@lsp.type.namespace") { theme["@lsp.type.namespace"], gui = "italic" },
       }
