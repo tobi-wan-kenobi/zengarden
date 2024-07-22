@@ -287,7 +287,7 @@ local theme = lush(function(injected_functions)
     -- Conditional    { }, --   if, then, else, endif, switch, etc.
     -- Repeat         { }, --   for, do, while, etc.
     -- Label          { }, --   case, default, etc.
-    -- Operator       { }, --   "sizeof", "+", "*", etc.
+    Operator       { fg = color.clay }, --   "sizeof", "+", "*", etc.
     Keyword        { fg = color.sand }, --   any other keyword
     Exception      { fg = color.cherry_light }, --   try, catch, throw
 
@@ -316,8 +316,6 @@ local theme = lush(function(injected_functions)
     -- These groups are for the native LSP client and diagnostic system. Some
     -- other LSP clients may use these groups, or use their own. Consult your
     -- LSP client"s documentation.
-
-    rustAttribute { fg = color.bamboo },
 
     -- See :h lsp-highlight, some groups may not be listed, submit a PR fix to lush-template!
     --
@@ -413,6 +411,7 @@ local theme = lush(function(injected_functions)
     sym"@keyword.return" { fg = color.terracotta },
     sym"@keyword.gitcommit" { fg = color.bamboo },
     sym"@lsp.type.namespace" { fg = color.bamboo },
+    sym"@lsp.type" { Type },
     sym"@operator" { fg = color.clay },
     sym"@lsp.type.decorator" { Comment },
     sym"@string.special.path.gitcommit" { fg = theme.fg_dim },
@@ -422,7 +421,7 @@ local theme = lush(function(injected_functions)
     -- sym"@type.definition"   { }, -- Typedef
     -- sym"@storageclass"      { }, -- StorageClass
     -- sym"@structure"         { }, -- Structure
-    sym"@namespace"         { fg = color.pond }, -- Identifier
+    sym"@namespace"         { fg = color.bamboo }, -- Identifier
     sym"@include"           { fg = color.pond }, -- Include
     sym"@preproc"           { fg = color.oldwood }, -- PreProc
     sym"@comment.gitcommit" { Comment },
