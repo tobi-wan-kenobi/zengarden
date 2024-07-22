@@ -63,8 +63,8 @@ Currently, you can set the following parameters:
 | foreground (dim) | Almond (dim)    | `#e8d8c1` | ![#e8d8c1](https://placehold.co/10x10/e8d8c1/e8d8c1.png) |
 | blue (base)      | Pond            | `#4e98c5` | ![#4e98c5](https://placehold.co/10x10/4e98c5/4e98c5.png) |
 | blue (light)     | Lake            | `#5fb3db` | ![#5fb3db](https://placehold.co/10x10/5fb3db/5fb3db.png) |
-| red (base)       | Coral           | `#c57673` | ![#c57673](https://placehold.co/10x10/c57673/c57673.png) |
-| red (light)      | Terracotta      | `#df907f` | ![#df907f](https://placehold.co/10x10/df907f/df907f.png) |
+| red (base)       | Coral           | `#c4757d` | ![#c4757d](https://placehold.co/10x10/c4757d/c4757d.png) |
+| red (light)      | Terracotta      | `#f77c88` | ![#f77c88](https://placehold.co/10x10/f77c88/f77c88.png) |
 | green (base)     | Bamboo          | `#50a27c` | ![#50a27c](https://placehold.co/10x10/50a27c/50a27c.png) |
 | green (light)    | Shamrock        | `#74ba8b` | ![#74ba8b](https://placehold.co/10x10/74ba8b/74ba8b.png) |
 | yellow (base)    | Sand            | `#a78c41` | ![#a78c41](https://placehold.co/10x10/a78c41/a78c41.png) |

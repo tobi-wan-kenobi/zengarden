@@ -9,8 +9,8 @@
 	gravel: #686b6c;
 	sand: #a78c41;
 	triandra: #c4a35a;
-	coral: #c57673;
-	terracotta: #df907f;
+	coral: #c4757d;
+	terracotta: #f77c88;
 
     /* Theme colors */
     background:                  @basalt;
