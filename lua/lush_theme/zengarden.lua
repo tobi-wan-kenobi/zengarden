@@ -355,7 +355,8 @@ local theme = lush(function(injected_functions)
     -- DiagnosticSignOk           { } , -- Used for "Ok" signs in sign column.
 
 
-    rustAttribute { Keyword },
+    rustAttribute { Comment },
+    rustDeriveTrait { Comment },
     rustFoldBraces { Delimiter },
     -- Tree-Sitter syntax groups.
     --
@@ -419,6 +420,9 @@ local theme = lush(function(injected_functions)
     sym"@operator" { fg = color.clay },
     sym"@lsp.type.decorator" { Comment },
     sym"@lsp.type.character" { Character },
+    sym"@lsp.typemod.character" { Character },
+    sym"@lsp.typemod.string" { String },
+    sym"@lsp.typemod.number" { Number },
     sym"@string.special.path.gitcommit" { fg = theme.fg_dim },
     -- sym"@exception"         { }, -- Exception
     sym"@variable"          { fg = theme.fg_dim }, -- Identifier
